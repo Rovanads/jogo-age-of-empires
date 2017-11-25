@@ -6,9 +6,11 @@
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Civilizacao.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Entidade.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Unidade.java</file>
+            <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Ataque.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Movivel.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Casa.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Arqueiro.java</file>
+            <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/AtaqueDeAlcance.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Dinheiro.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Posicao.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Quartel.java</file>
@@ -19,7 +21,6 @@
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Templo.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Egito.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Elefante.java</file>
-            <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Atacante.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Falange.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Guerreiro.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Mapa.java</file>
@@ -27,7 +28,6 @@
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Campones.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Construcao.java</file>
             <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/Torre.java</file>
-            <file>file:/C:/Users/Rovana/Documents/NetBeansProjects/Jogo/src/jogo/AtacanteDeAlcance.java</file>
         </group>
     </open-files>
 </project-private>

@@ -17,16 +17,15 @@ public class Elefante extends Unidade {
     //armadura = 2;
     //velocidade = 1.0;
 
-public Elefante (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao, 
-                armadura, velocidade, ataque);
+public Elefante (Posicao posicao, Civilizacao civilizacao){
+        super ("Elefante.jpg", new Dinheiro (170,40,0), true, 600, posicao, civilizacao, 
+                2, 1.0, new Ataque());
         
     
 }
-public void Mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementação.
+@Override
+public void mover (String direcao){
+        //aguardar a resposta do Valdir para essa implementacao.
     }
     
 }

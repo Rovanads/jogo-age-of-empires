@@ -11,14 +11,14 @@ package jogo;
  */
 public class Casa extends Construcao {
     //pontos vitais = 75;
-    //ataque = não tem;
+    //ataque = nao tem;
     //custo = 30 madeiras;
-    //alcance = não tem;
+    //alcance = nao tem;
     
         
-        public Casa (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao);
+        public Casa (Posicao posicao, Civilizacao civilizacao){
+        super ("Casa.jpg", new Dinheiro (0,0,30), true, 75, posicao, 
+                civilizacao, new Ataque());
         
         //cada casa permite 2 unidades de capacidade da populacao.
     } 

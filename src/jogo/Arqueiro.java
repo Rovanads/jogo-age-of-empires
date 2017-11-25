@@ -10,7 +10,7 @@ package jogo;
  * @author Rovana
  */
 public class Arqueiro extends Unidade {
-    //arqueiro ataca de alcance também
+    //arqueiro ataca de alcance tambÃ©m
     //pontosdevida = 45;
     //ataque = 5;
     //custo = 40 comidas e 20 ouros;
@@ -18,27 +18,18 @@ public class Arqueiro extends Unidade {
     //armadura = 0;
     //velocidade = 2.0;
 
-public Arqueiro (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao, 
-                armadura, velocidade, ataque);       
+public Arqueiro (Posicao posicao, Civilizacao civilizacao){
+        super ("Arqueiro.jpg", new Dinheiro (40,20,0), true, 45, posicao, 
+                civilizacao, 0, 2.0, new Ataque());       
     
 }
 @Override
-public void Mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementação.
+public void mover (String direcao){
+        //aguardar a resposta do Valdir para essa implementacao.
     } 
-@Override
-public void estado (){
-    if (pontosvitais > 0){
-        estado = true;
-    }
-    else {        
-        System.out.println("Morto");
-    }
+
     
 }
      
     
-}
+

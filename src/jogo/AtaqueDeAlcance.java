@@ -9,14 +9,14 @@ package jogo;
  *
  * @author Rovana
  */
-public class AtacanteDeAlcance extends Atacante {
-    int alcance; //para arqueiro e sacerdote, são as unidades que atacam por alcance;
-    public AtacanteDeAlcance (int ataque, int alcance){
+public class AtaqueDeAlcance extends Ataque {
+    int alcance; //para arqueiro e sacerdote, sao as unidades que atacam por alcance;
+    public AtaqueDeAlcance (int ataque, int alcance){
         super (ataque);
         this.alcance = alcance;
     }
     @Override
-     public void Ataca (Entidade entidadeAtacada){
+     public void ataca (Entidade entidadeAtacada){
          entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - ataque;
          
      }

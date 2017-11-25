@@ -10,6 +10,6 @@ package jogo;
  * @author Rovana
  */
 public interface Movivel {
-    public void Mover (String direcao);
+    public void mover (String direcao);
     
 }

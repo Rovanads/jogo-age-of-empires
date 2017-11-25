@@ -18,31 +18,31 @@ public class Campones extends Unidade  {
     //velocidade = 2.0;
 
     
-    public Campones (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao, 
-                armadura, velocidade, ataque);
+    public Campones (Posicao posicao, Civilizacao civilizacao){
+        super ("Campones.jpg", new Dinheiro (50,0,0), true, 50, posicao, civilizacao, 
+                0, 2.0, new Ataque());
       
     
 }
-    public void Mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementação.
+    @Override
+    public void mover (String direcao){
+        //aguardar a resposta do Valdir para essa implementacao.
     }
-    public Construcao Constroi (Posicao posicao, Construcao tipo){
-        //cria uma construção do tipo desejado.
-        //implementar o método
+    
+    public Construcao constroi (Posicao posicao, Construcao tipo){
+        //cria uma construcao do tipo desejado.
+        //implementar o metodo
     }
-    public void Colhe (){
-        //gera uma unidade de comida para a civilização.
+    public void colhe (){
+        //gera uma unidade de comida para a civilizacao.
         custo.comida = custo.comida + 1;
     }
-    public void Corta (){
-        //gera uma unidade de madeira para a civilização.
+    public void corta (){
+        //gera uma unidade de madeira para a civilizacao.
         custo.madeira = custo.madeira + 1;
     }
-    public void Minera (){
-        //gera uma unidade de ouro para a civilização.
+    public void minera (){
+        //gera uma unidade de ouro para a civilizacao.
         custo.ouro = custo.ouro + 1;
     }
             

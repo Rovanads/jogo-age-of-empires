@@ -17,15 +17,13 @@ public class Cavaleiro extends Unidade {
     //armadura = 3;
     //velocidade = 4.0;
 
-public Cavaleiro (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao, 
-                armadura, velocidade, ataque);        
+public Cavaleiro (Posicao posicao, Civilizacao civilizacao){
+        super ("Cavaleiro.jpg", new Dinheiro (70,80,0), true, 180, posicao, civilizacao, 
+                3, 4.0, new Ataque());        
     
 }
 @Override
-public void Mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementação.
+public void mover (String direcao){
+        //aguardar a resposta do Valdir para essa implementacao.
     }
 }

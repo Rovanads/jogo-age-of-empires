@@ -11,11 +11,11 @@ package jogo;
  */
 abstract public class Civilizacao {
     
-    Dinheiro dinheiro;//gastos a medida que a civilização cria objetos e 
+    Dinheiro dinheiro;//gastos a medida que a civilizacao cria objetos e 
     //recuperados atraves dos metodos dos objetos camponeses.
     Construcao construcoes; //vivas
     Unidade unidades;
-    //os atributos citados acima são gastos a medida que a civilizacao cria 
+    //os atributos citados acima sÃ£o gastos a medida que a civilizacao cria 
     //objetos, e recuperados atraves dos metodos dos objetos camponeses.
       
     public int populacao;//nao pode ser maior que a capacidade da populacao
@@ -30,10 +30,10 @@ abstract public class Civilizacao {
         
     }
     //1 centro da cidade;
-    public void inicializa (posicao){
+    public void inicializa (Posicao posicao){
         
     }
-    public boolean podeConstruir (tipo){
+    public boolean podeConstruir (Construcao tipo){
         
     }
     

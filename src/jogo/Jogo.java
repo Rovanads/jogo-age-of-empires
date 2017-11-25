@@ -10,14 +10,12 @@ package jogo;
  * @author Rovana
  */
 public class Jogo {
-
-    /**
-     * @param args the command line arguments
-     */
+    Civilizacao civA;
+    Civilizacao civB;
+    Mapa mapa;
+    
     public static void main(String[] args) {
-        Civilizacao civA;
-        Civilizacao civB;
-        Mapa mapa;
+        
     }
     
 }

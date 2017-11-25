@@ -12,24 +12,20 @@ package jogo;
 abstract public class Entidade {
     public String imagem;
     Dinheiro custo;
-    public boolean estado = true; //criar um método se a entidade está viva ou morta?
+    public boolean isVivo;
     public int pontosvitais; // carga de vida
     Posicao posicao;
     Civilizacao civilizacao;
     
-    public Entidade (String imagem, Dinheiro custo, boolean estado, 
+    public Entidade (String imagem, Dinheiro custo, boolean isVivo, 
             int pontosvitais, Posicao posicao, Civilizacao civilizacao){
         this.imagem = imagem;
         this.custo = custo;
-        this.estado = estado;
+        this.isVivo = isVivo;
         this.pontosvitais = pontosvitais;
         this.posicao = posicao;
         this.civilizacao = civilizacao;
     }
-    abstract void estado ();
-        //devo criar um método para informar se a entidade está viva ou morta, 
-    //crio aqui, ou mantenho esse método abstrato aqui e nas classes filhas, implementando
-    //apenas nas unidades e construções, como arqueiro e etc.
-    }
-    
 }
+    
+

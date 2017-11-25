@@ -11,14 +11,20 @@ package jogo;
  */
 public class Dinheiro {
     //quanto custa para construir um objeto.
-    int madeira;
-    int ouro;
-    int comida;
-    public void Soma (Dinheiro){
+    int madeira = 500;
+    int ouro = 500;
+    int comida = 500;
+    
+    public Dinheiro (int comida, int ouro, int madeira){
+        this.comida = comida;
+        this.ouro = ouro;
+        this.madeira = madeira;
+    }
+    public void soma (Dinheiro){
         
         
     }
-    public void Subtrai (Dinheiro){
+    public void subtrai (Dinheiro){
         madeira = madeira - 1;
         ouro = ouro - 1;
         comida = comida - 1;

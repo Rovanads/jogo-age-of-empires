@@ -15,9 +15,9 @@ public class Templo extends Construcao {
     //custo = 250 madeiras;
     //alcance = não tem;
    
-        public Templo (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao); 
+        public Templo (Posicao posicao, Civilizacao civilizacao){
+        super ("Templo.jpg", new Dinheiro (0,0,250), true, 350, posicao, 
+                civilizacao, new Ataque()); 
         
     
 }

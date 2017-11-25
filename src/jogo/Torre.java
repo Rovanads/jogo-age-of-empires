@@ -14,13 +14,12 @@ public class Torre extends Construcao {
     //ataque = 20;
     //custo = 70 madeiras;
     //alcance = 7;
-public Atacante ataque;
 
-public Torre (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
-            Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao);    
-        this.ataque = ataque;
+
+public Torre (Posicao posicao, Civilizacao civilizacao){
+        super ("Torre.jpg", new Dinheiro (0,0,70), true, 200, posicao, 
+                civilizacao, new Ataque());    
+       
        
     
 } 

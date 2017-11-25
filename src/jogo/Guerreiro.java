@@ -10,15 +10,14 @@ package jogo;
  * @author Rovana
  */
 public class Guerreiro extends Unidade {
-public Guerreiro (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Atacante ataque){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao, 
-                armadura, velocidade, ataque);       
+public Guerreiro (Posicao posicao, Civilizacao civilizacao){
+        super ("Guerreiro.jpg", new Dinheiro (0,50,0), true, 160, posicao, civilizacao, 
+                2, 1.8, new Ataque());       
     
 }
-public void Mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementação.
+@Override
+public void mover (String direcao){
+        //aguardar a resposta do Valdir para essa implementacao.
     }
      
     

@@ -15,17 +15,16 @@ public class CentrodaCidade extends Construcao {
     //custo = 200 madeiras;
     //alcance = 8;
 
-public Atacante ataque;
 
-public CentrodaCidade (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
-            Atacante ataque ){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao);    
-        this.ataque = ataque;        
+
+public CentrodaCidade (Posicao posicao, Civilizacao civilizacao ){
+        super ("CentrodaCidade.jpg", new Dinheiro (0,0,200), true, 600, posicao, 
+                civilizacao, new Ataque());    
+               
     
 }
 public Campones criaCampones (){
-            //implementar o método
+            //implementar o metodo
             //cria a unidade campones
             
         }

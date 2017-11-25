@@ -10,20 +10,20 @@ package jogo;
  * @author Rovana
  */
 public class Quartel extends Construcao {
-        //aguardando resposta do Valdir em relação a classe posição;
+        //aguardando resposta do Valdir em relacaoo a classe posicao;
     //pontos vitais = 350;
-    //ataque = não tem;
+    //ataque = nao tem;
     //custo = 125 madeiras;
-    //alcance = não tem;
+    //alcance = nao tem;
    
-        public Quartel (String imagem, Dinheiro custo, boolean estado, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
-        super (imagem, custo, estado, pontosvitais, posicao, civilizacao); 
+        public Quartel (Posicao posicao, Civilizacao civilizacao){
+        super ("Quartel.jpg", new Dinheiro (0,0,125), true, 350, posicao, 
+                civilizacao, new Ataque()); 
         
     
 }
         public Guerreiro criaGuerreiro (){
-            //implementar o método
+            //implementar o metodo
             //cria as unidades: guerreiro, cavalheiro, arqueiro, elefante e 
             //falange
             
