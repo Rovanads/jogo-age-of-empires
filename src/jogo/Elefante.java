@@ -18,14 +18,11 @@ public class Elefante extends Unidade {
     //velocidade = 1.0;
 
 public Elefante (Posicao posicao, Civilizacao civilizacao){
-        super ("Elefante.jpg", new Dinheiro (170,40,0), true, 600, posicao, civilizacao, 
-                2, 1.0, new Ataque());
+        super ("Elefante.jpg", new Dinheiro (170,40,0), true, 600, posicao, 
+                civilizacao,2, 1.0, new Ataque(18));
         
     
 }
-@Override
-public void mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementacao.
-    }
+
     
 }

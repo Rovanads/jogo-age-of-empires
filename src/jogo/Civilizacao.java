@@ -13,8 +13,10 @@ abstract public class Civilizacao {
     
     Dinheiro dinheiro;//gastos a medida que a civilizacao cria objetos e 
     //recuperados atraves dos metodos dos objetos camponeses.
-    Construcao construcoes; //vivas
-    Unidade unidades;
+    List <Construcao>; //vivas
+    List <Unidade>;
+    //nunca usei arraylist, coloquei assim como atributo, mas ta dando erro.
+    
     //os atributos citados acima sÃ£o gastos a medida que a civilizacao cria 
     //objetos, e recuperados atraves dos metodos dos objetos camponeses.
       
@@ -34,6 +36,18 @@ abstract public class Civilizacao {
         
     }
     public boolean podeConstruir (Construcao tipo){
+        
+    }
+    public void adicionaUnidade (Unidade unidade){
+        
+    }
+    public void removeUnidade (Unidade unidade){
+        
+    }
+    public void adicionaConstrucao (Construcao construcao){
+        
+    }
+    public void removeConstrucao (Construcao construcao){
         
     }
     

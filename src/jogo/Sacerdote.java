@@ -19,14 +19,15 @@ public class Sacerdote extends Unidade {
     //velocidade = 1.0;
     public Sacerdote (Posicao posicao, Civilizacao civilizacao){
         super ("Sacerdote.jpg", new Dinheiro (0,125,0), true, 25, posicao, 
-                civilizacao, 0, 1.0, new Ataque());        
+                civilizacao, 0, 1.0, new AtaqueDeAlcance(0, 10));        
     
 }
-    @Override
-public void mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementacao.
-    }
+    
 public void converteInimigo (Entidade entidade){
+    this.civilizacao.adicionaUnidade (entidade);
+    entidade.civilizacao.removeUnidade (entidade);
+    entidade.setCivilizacao(this.getCivilizacao());
+            
     //implementar esse metodo
     //converte unidades e construcoes inimigas em sua civilizacao;
 }

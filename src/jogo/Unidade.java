@@ -11,17 +11,16 @@ package jogo;
  */
 abstract public class Unidade extends Entidade implements Movivel {
     
-    public int armadura; // a cada ataque perde-se pontos de armadura;
     public double velocidade; // velocidade que a unidade se move   
     public Ataque ataque;
     
     
     
     public Unidade (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Ataque ataque){
-        super (imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
-        this.armadura = armadura;
+            int pontosvitais,Posicao posicao, Civilizacao civilizacao, 
+            int armadura,double velocidade, Ataque ataque){
+        super (imagem, custo, isVivo, pontosvitais, posicao, civilizacao, 
+                armadura);        
         this.velocidade = velocidade;
         this.ataque = ataque;
         

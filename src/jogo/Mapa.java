@@ -12,7 +12,11 @@ package jogo;
 public class Mapa {
     Entidade [][] alocacao;
     
-}
-public Entidade checaAlocacao (posicao){
+    public static final Mapa mapa = new Mapa ();    
 
+public static Mapa get(){
+return mapa;
+}
+public  Entidade checaAlocacao (Posicao p){
+return alocacao [p.x][p.y]; //ta dando erro, nao entendi pq.
 }

@@ -18,7 +18,7 @@ public class Torre extends Construcao {
 
 public Torre (Posicao posicao, Civilizacao civilizacao){
         super ("Torre.jpg", new Dinheiro (0,0,70), true, 200, posicao, 
-                civilizacao, new Ataque());    
+                civilizacao, 0, new AtaqueDeAlcance(20, 7));    
        
        
     

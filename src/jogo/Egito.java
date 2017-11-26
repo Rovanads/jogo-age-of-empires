@@ -27,9 +27,5 @@ super (new Dinheiro (500, 500, 500), populacaoatual, capacidadePopulacao);
      Construcao constrs [];
 }
 
-public Elefante criaElefante (){
-//implementar o metodo
-            //cria as unidades: elefante.
-            
-}
+
 }

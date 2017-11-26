@@ -20,13 +20,10 @@ public class Arqueiro extends Unidade {
 
 public Arqueiro (Posicao posicao, Civilizacao civilizacao){
         super ("Arqueiro.jpg", new Dinheiro (40,20,0), true, 45, posicao, 
-                civilizacao, 0, 2.0, new Ataque());       
+                civilizacao, 0, 2.0, new AtaqueDeAlcance(5, 7));       
     
 }
-@Override
-public void mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementacao.
-    } 
+
 
     
 }

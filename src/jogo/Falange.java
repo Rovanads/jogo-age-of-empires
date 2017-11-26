@@ -18,12 +18,9 @@ public class Falange extends Unidade {
     //velocidade = 1.2;
 public Falange (Posicao posicao, Civilizacao civilizacao){
         super ("Falange.jpg", new Dinheiro (60,40,0), true, 120, posicao, civilizacao, 
-                7, 1.2, new Ataque());       
+                7, 1.2, new Ataque(20));       
     
 }
-@Override
-public void mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementacao.
-    } 
+
     
 }

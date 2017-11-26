@@ -18,7 +18,7 @@ public class Quartel extends Construcao {
    
         public Quartel (Posicao posicao, Civilizacao civilizacao){
         super ("Quartel.jpg", new Dinheiro (0,0,125), true, 350, posicao, 
-                civilizacao, new Ataque()); 
+                civilizacao, 0, new Ataque(0)); 
         
     
 }

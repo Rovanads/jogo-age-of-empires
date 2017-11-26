@@ -20,16 +20,17 @@ public class Dinheiro {
         this.ouro = ouro;
         this.madeira = madeira;
     }
-    public void soma (Dinheiro){
+    public void soma (Dinheiro dinheiro){
         
         
     }
-    public void subtrai (Dinheiro){
+    public void subtrai (Dinheiro dinheiro){
         madeira = madeira - 1;
         ouro = ouro - 1;
         comida = comida - 1;
     }
-    public boolean checaNegativo (){
-        
+    public boolean checaNegativo (Dinheiro d){
+        return this.madeira - d.madeira < 0 || this.ouro - d.ouro < 0 || 
+                this.comida - d.comida < 0;
     }
 }

@@ -27,10 +27,6 @@ super (new Dinheiro (500, 500, 500), populacao, capacidade);
     Construcao constrs [];
 }
 
-public Falange criaFalange (){
-//implementar o metodo
-            //cria as unidades: elefante.
-            
-} 
+
     
 }

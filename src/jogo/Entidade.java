@@ -16,15 +16,18 @@ abstract public class Entidade {
     public int pontosvitais; // carga de vida
     Posicao posicao;
     Civilizacao civilizacao;
+    int armadura;
     
     public Entidade (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
+            int armadura){
         this.imagem = imagem;
         this.custo = custo;
         this.isVivo = isVivo;
         this.pontosvitais = pontosvitais;
         this.posicao = posicao;
         this.civilizacao = civilizacao;
+        this.armadura = armadura;
     }
 }
     

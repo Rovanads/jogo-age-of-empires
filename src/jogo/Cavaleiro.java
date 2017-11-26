@@ -19,11 +19,8 @@ public class Cavaleiro extends Unidade {
 
 public Cavaleiro (Posicao posicao, Civilizacao civilizacao){
         super ("Cavaleiro.jpg", new Dinheiro (70,80,0), true, 180, posicao, civilizacao, 
-                3, 4.0, new Ataque());        
+                3, 4.0, new Ataque(12));        
     
 }
-@Override
-public void mover (String direcao){
-        //aguardar a resposta do Valdir para essa implementacao.
-    }
+
 }
