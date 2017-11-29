@@ -24,12 +24,14 @@ public class Sacerdote extends Unidade {
 }
     
 public void converteInimigo (Entidade entidade){
-    this.civilizacao.adicionaUnidade (entidade);
-    entidade.civilizacao.removeUnidade (entidade);
+    
+    this.getCivilizacao().adicionaUnidade(this);
+    entidade.getCivilizacao().removeUnidade(this);
     entidade.setCivilizacao(this.getCivilizacao());
+    }
             
     //implementar esse metodo
     //converte unidades e construcoes inimigas em sua civilizacao;
 }
     
-}
+

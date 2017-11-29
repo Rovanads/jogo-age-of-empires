@@ -10,16 +10,21 @@ package jogo;
  * @author Rovana
  */
 public class Ataque {
-    int ataque;  
-    Entidade entidade;
+    protected int ataque;  
+    protected Entidade entidade;
     public Ataque (int ataque, Entidade entidade){
        this.ataque = ataque; 
        this.entidade = entidade;
-       //coloquei entidade como sugerido, mas ta dando erro nas classes filhas.
+       
     }
-    public void ataca (Entidade entidadeAtacada){       
+    public void ataca (Entidade entidadeAtacada){  
+        if (entidadeAtacada instanceof Unidade){
         entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - (ataque - 
-                entidadeAtacada.armadura);
+                ((Unidade) entidadeAtacada).armadura);
+        }
+        else{
+            entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - ataque;
+        }
         
         
                 //esse metodo retira dos pontos vitais do objeto atacado, o numero
@@ -32,8 +37,8 @@ public class Ataque {
     }
     
     public boolean podeAtacar (Entidade entidadeAtacada){
-        Posicao p1 = this.entidade.posicao;
-        Posicao p2 = entidadeAtacada.posicao;
+        Posicao p1 = this.entidade.getPosicao();
+        Posicao p2 = entidadeAtacada.getPosicao();
         return Math.abs(p1.x - p2.x) == 1 && Math.abs(p1.y - p2.y) == 1;
     }
     

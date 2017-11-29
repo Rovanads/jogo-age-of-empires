@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
 
+package jogo;
+import java.util.ArrayList;
 /**
  *
  * @author Rovana
  */
+
 abstract public class Civilizacao {
     
-    Dinheiro dinheiro;//gastos a medida que a civilizacao cria objetos e 
+    private Dinheiro dinheiro;//gastos a medida que a civilizacao cria objetos e 
     //recuperados atraves dos metodos dos objetos camponeses.
-    List <Construcao>; //vivas
-    List <Unidade>;
-    //nunca usei arraylist, coloquei assim como atributo, mas ta dando erro.
+    private ArrayList<Construcao> construcoes = new ArrayList <>(); //vivas
+    private ArrayList<Unidade> unidades = new ArrayList <>();    
     
     //os atributos citados acima sÃ£o gastos a medida que a civilizacao cria 
     //objetos, e recuperados atraves dos metodos dos objetos camponeses.
@@ -39,16 +40,40 @@ abstract public class Civilizacao {
         
     }
     public void adicionaUnidade (Unidade unidade){
+        this.getUnidades().add(unidade);
+        this.populacao = this.getUnidades().size();
+        
         
     }
     public void removeUnidade (Unidade unidade){
-        
+        this.getUnidades().remove(unidade);
+        this.populacao = this.getUnidades().size();
     }
     public void adicionaConstrucao (Construcao construcao){
-        
+        this.getConstrucoes().add(construcao);
+        //criar o algoritmo de aumento da capacidade da populacao;
     }
     public void removeConstrucao (Construcao construcao){
-        
+         this.getConstrucoes().remove(construcao);
+        //criar o algoritmo de diminuicao da capacidade da populacao;
+    }
+    public Dinheiro getDinheiro (){
+        return this.dinheiro;
+    }
+    public void setDinheiro (Dinheiro d){
+        this.dinheiro = d;
+    }
+    public ArrayList getUnidades (){
+        return this.unidades;
+    }
+    public void setUnidades (ArrayList u){
+        this.unidades = u;
+    }
+    public ArrayList getConstrucoes (){
+        return this.construcoes;
+    }
+    public void setConstrucoes (ArrayList c){
+        this.construcoes = c;
     }
     
         

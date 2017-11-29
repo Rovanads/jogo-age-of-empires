@@ -18,7 +18,7 @@ public class Casa extends Construcao {
         
         public Casa (Posicao posicao, Civilizacao civilizacao){
         super ("Casa.jpg", new Dinheiro (0,0,30), true, 75, posicao, 
-                civilizacao, 0, new Ataque(0));
+                civilizacao, new Ataque(0, this));//não dá.
         
         //cada casa permite 2 unidades de capacidade da populacao.
     } 

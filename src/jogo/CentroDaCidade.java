@@ -19,15 +19,16 @@ public class CentroDaCidade extends Construcao {
 
 public CentroDaCidade (Posicao posicao, Civilizacao civilizacao ){
         super ("CentrodaCidade.jpg", new Dinheiro (0,0,200), true, 600, posicao, 
-                civilizacao, 0, new AtaqueDeAlcance(10, 8));    
+                civilizacao, new AtaqueDeAlcance(10, 8));    
                
     
 }
 public Campones criaCampones (){
-    if(this.civilizacao.podeConstruir(Campones.class)){
+    if(this.getCivilizacao().podeConstruir(Campones.class)){
         //Campones.class tambem nao ta aceitando.
     
-        this.civilizacao.adicionaUnidade(new Campones (this.posicao, this.civilizacao));
+        this.getCivilizacao().adicionaUnidade(new Campones (this.getPosicao(), 
+                this.getCivilizacao()));
         
             //implementar o metodo
             //cria a unidade campones

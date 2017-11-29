@@ -11,9 +11,8 @@ package jogo;
  */
 public class AtaqueDeAlcance extends Ataque {
     int alcance; //para arqueiro e sacerdote, sao as unidades que atacam por alcance;
-    public AtaqueDeAlcance (int ataque, int alcance){
-        super (ataque, entidade);
-        //aqui ele não tá compilando pq não tá aceitando esse entidade ai, pq??
+    public AtaqueDeAlcance (int ataque, Entidade entidade, int alcance){
+        super (ataque, entidade);        
         this.alcance = alcance;
     }
     @Override
@@ -22,8 +21,8 @@ public class AtaqueDeAlcance extends Ataque {
      }
      @Override
      public boolean podeAtacar (Entidade entidadeAtacada){
-         Posicao p1 = this.entidade.posicao;
-         Posicao p2 = entidadeAtacada.posicao;
+         Posicao p1 = this.entidade.getPosicao();
+         Posicao p2 = entidadeAtacada.getPosicao();
          return Math.abs(p1.x - p2.x)<= alcance && Math.abs(p1.y - p2.y) <= alcance;
      }
     

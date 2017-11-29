@@ -17,9 +17,8 @@ public class Templo extends Construcao {
    
         public Templo (Posicao posicao, Civilizacao civilizacao){
         super ("Templo.jpg", new Dinheiro (0,0,250), true, 350, posicao, 
-                civilizacao, 0, new Ataque(0)); 
-        //se eu tirar o metodo ataque do super ele dá erro, ha nao ser que eu
-        //tire la na Construcao.
+                civilizacao, new Ataque(0)); 
+       
         
     
 }

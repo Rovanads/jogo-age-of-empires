@@ -11,23 +11,41 @@ package jogo;
  */
 abstract public class Entidade {
     public String imagem;
-    Dinheiro custo;
+    private Dinheiro custo;
     public boolean isVivo;
     public int pontosvitais; // carga de vida
-    Posicao posicao;
-    Civilizacao civilizacao;
-    int armadura;
+    private Posicao posicao;
+    private Civilizacao civilizacao;
+    
     
     public Entidade (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
-            int armadura){
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
+        //quando meus atributos são privados, eu posso colocá-los no Construtor?
         this.imagem = imagem;
         this.custo = custo;
         this.isVivo = isVivo;
         this.pontosvitais = pontosvitais;
-        this.posicao = posicao;
+        this.posicao = posicao;        
         this.civilizacao = civilizacao;
-        this.armadura = armadura;
+       
+    }
+    public Posicao getPosicao (){
+        return this.posicao;
+    }
+    public void setPosicao (Posicao p){
+        this.posicao = p;
+    }
+    public Civilizacao getCivilizacao (){
+        return this.civilizacao;
+    }
+    public void setCivilizacao(Civilizacao c){
+        this.civilizacao = c;
+    }
+    public Dinheiro getDinheiro (){
+        return this.custo;
+    }
+    public void setDinheiro (Dinheiro d){
+        this.custo = d;
     }
 }
     

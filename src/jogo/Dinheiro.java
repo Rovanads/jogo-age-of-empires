@@ -21,7 +21,7 @@ public class Dinheiro {
         this.madeira = madeira;
     }
     public void soma (Dinheiro dinheiro){
-        
+        //olhar emailsvaldir
         
     }
     public void subtrai (Dinheiro dinheiro){
