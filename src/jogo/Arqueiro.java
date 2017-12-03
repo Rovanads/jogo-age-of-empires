@@ -20,13 +20,17 @@ public class Arqueiro extends Unidade {
 
 public Arqueiro (Posicao posicao, Civilizacao civilizacao){
         super ("Arqueiro.jpg", new Dinheiro (40,20,0), true, 45, posicao, 
-                civilizacao, 0, 2.0, new AtaqueDeAlcance(5, this, 7));       
-    //não ta dando certo, acho que e o this.
+                civilizacao, 0, 2.0, new AtaqueDeAlcance(5, 7));       
+    
 }
-
 
     
 }
+
+
+
+    
+
      
     
 

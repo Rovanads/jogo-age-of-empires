@@ -40,4 +40,5 @@ public class Quartel extends Construcao {
         public Falange criaFalange (){
             
         }
+        //aqui os metodos nao estao compilando pq precisam ser implementados.
 }

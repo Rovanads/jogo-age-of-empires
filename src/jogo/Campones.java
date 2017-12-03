@@ -9,7 +9,7 @@ package jogo;
  *
  * @author Rovana
  */
-public class Campones extends Unidade  {
+public class Campones extends Unidade {
     //pontosdevida = 50;
     //ataque = 3;
     //custo = 50 comidas;
@@ -20,11 +20,11 @@ public class Campones extends Unidade  {
     
     public Campones (Posicao posicao, Civilizacao civilizacao){
         super ("Campones.jpg", new Dinheiro (50,0,0), true, 50, posicao, civilizacao, 
-                0, 2.0, new Ataque(3, this)); //também não aceita
+                0, 2.0, new Ataque(3));
 }    
     public Construcao constroi (Posicao posicao, Construcao tipo){
         //cria uma construcao do tipo desejado.
-        //implementar o metodo
+        //implementar o metodo, por isso nao ta compilando.
     }
     public void colhe (){
         //gera uma unidade de comida para a civilizacao.
@@ -38,7 +38,7 @@ public class Campones extends Unidade  {
         //gera uma unidade de ouro para a civilizacao.
         this.getCivilizacao().getDinheiro().soma(new Dinheiro (0, 1, 0));
     }
-            
+         
 
     
 }

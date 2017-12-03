@@ -26,4 +26,5 @@ public class Templo extends Construcao {
             //a unidade é colocada na mesma posicao da construcao;
             
         }
+        //aqui tbm nao compila pq precisamos implementar esse metodo.
 }

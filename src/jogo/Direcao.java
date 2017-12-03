@@ -9,7 +9,7 @@ package jogo;
  *
  * @author Rovana
  */
-public interface Movivel {
-    public void mover (Direcao direcao);
-    
+public enum Direcao {
+    //norte, nordeste, noroeste, sul, sudeste, sudoeste, leste, oeste
+        N, NE, NW, S, SE, SW,E, W
 }

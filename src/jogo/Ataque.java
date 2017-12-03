@@ -11,10 +11,10 @@ package jogo;
  */
 public class Ataque {
     protected int ataque;  
-    protected Entidade entidade;
-    public Ataque (int ataque, Entidade entidade){
+    protected Entidade entidade;   
+    public Ataque (int ataque){
        this.ataque = ataque; 
-       this.entidade = entidade;
+       
        
     }
     public void ataca (Entidade entidadeAtacada){  
@@ -36,10 +36,11 @@ public class Ataque {
                 //nao consigo tirar os pontos da armadura da Entidade atacada.
     }
     
-    public boolean podeAtacar (Entidade entidadeAtacada){
-        Posicao p1 = this.entidade.getPosicao();
-        Posicao p2 = entidadeAtacada.getPosicao();
-        return Math.abs(p1.x - p2.x) == 1 && Math.abs(p1.y - p2.y) == 1;
+    public boolean podeAtacar (Entidade atacante, Entidade atacado){
+        return Mapa.getDistanciaRaio (atacante, atacado)<= 2;
+                //Tá escrito assim no problema: "o objeto atacado só poderá 
+                //sofrer o ataque se estiver a 2 unidades de distância do objeto atacante 
+                //(dica: pense em sobrescrita de métodos);"
     }
     
 }

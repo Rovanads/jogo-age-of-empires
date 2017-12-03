@@ -10,9 +10,9 @@ package jogo;
  * @author Rovana
  */
 public class AtaqueDeAlcance extends Ataque {
-    int alcance; //para arqueiro e sacerdote, sao as unidades que atacam por alcance;
-    public AtaqueDeAlcance (int ataque, Entidade entidade, int alcance){
-        super (ataque, entidade);        
+    int alcance;
+    public AtaqueDeAlcance (int ataque, int alcance){
+        super (ataque);        
         this.alcance = alcance;
     }
     @Override
@@ -20,10 +20,8 @@ public class AtaqueDeAlcance extends Ataque {
          
      }
      @Override
-     public boolean podeAtacar (Entidade entidadeAtacada){
-         Posicao p1 = this.entidade.getPosicao();
-         Posicao p2 = entidadeAtacada.getPosicao();
-         return Math.abs(p1.x - p2.x)<= alcance && Math.abs(p1.y - p2.y) <= alcance;
+     public boolean podeAtacar (Entidade atacante, Entidade atacado){         
+         return Mapa.getDistanciaRaio (atacante, atacado)<= alcance;
      }
     
 }

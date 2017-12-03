@@ -20,15 +20,22 @@ public class Dinheiro {
         this.ouro = ouro;
         this.madeira = madeira;
     }
-    public void soma (Dinheiro dinheiro){
-        //olhar emailsvaldir
+    public void soma (Dinheiro d){
+        if (checaNegativo(d)){
+            this.madeira -= d.madeira;
+            this.ouro -= d.ouro;
+            this.comida -= d.comida;
         
     }
-    public void subtrai (Dinheiro dinheiro){
-        madeira = madeira - 1;
-        ouro = ouro - 1;
-        comida = comida - 1;
     }
+    public void subtrai (Dinheiro d){
+        if (checaNegativo(d)){
+            this.madeira -= d.madeira;
+            this.ouro -= d.ouro;
+            this.comida -= d.comida;
+        }
+        }      
+    
     public boolean checaNegativo (Dinheiro d){
         return this.madeira - d.madeira < 0 || this.ouro - d.ouro < 0 || 
                 this.comida - d.comida < 0;

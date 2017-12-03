@@ -13,9 +13,7 @@ abstract public class Unidade extends Entidade implements Movivel {
     
     public double velocidade; // velocidade que a unidade se move   
     public Ataque ataque;
-    public int armadura;
-    
-    
+    public int armadura;    
     
     public Unidade (String imagem, Dinheiro custo, boolean isVivo, 
             int pontosvitais,Posicao posicao, Civilizacao civilizacao, 
@@ -26,11 +24,13 @@ abstract public class Unidade extends Entidade implements Movivel {
         this.armadura = armadura;
         
     }
-    
+    @Override
     public void mover(Direcao direcao){
     int passos = (int) velocidade;//trunca o valor para converter em passos
         for (int i = 0; i < passos; i++) {
         Mapa.get().moveUnidade(this, direcao);
+        //aqui nao ta compilando por causa da direcao.
+        
         //falange.mover(Mapa.Direcao.N)
 }
 }
