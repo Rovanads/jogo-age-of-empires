@@ -26,10 +26,9 @@ abstract public class Unidade extends Entidade implements Movivel {
     }
     @Override
     public void mover(Direcao direcao){
-    int passos = (int) velocidade;//trunca o valor para converter em passos
-        for (int i = 0; i < passos; i++) {
-        Mapa.get().moveUnidade(this, direcao);
-        //aqui nao ta compilando por causa da direcao.
+        Mapa.get().moveUnidade(this, direcao, velocidade);
+           
+        
         
         //falange.mover(Mapa.Direcao.N)
 }
@@ -43,7 +42,7 @@ abstract public class Unidade extends Entidade implements Movivel {
         //indicando que a unidade anddou duas unidades para cima no mapa.
         //x leste-oeste, y norte-sul.
         
-    }
+    
     
     
 

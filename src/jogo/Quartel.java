@@ -26,19 +26,20 @@ public class Quartel extends Construcao {
             //implementar o metodo
             //cria as unidades: guerreiro, cavalheiro, arqueiro, elefante e 
             //falange
+            return null;
             
         } 
         public Cavaleiro criaCavaleiro (){
-            
+            return null;
         }
         public Arqueiro criaArqueiro (){
-            
+            return null;
         }
         public Elefante criaElefante (){
-            
+            return null;
         }
         public Falange criaFalange (){
-            
+            return null;
         }
         //aqui os metodos nao estao compilando pq precisam ser implementados.
 }

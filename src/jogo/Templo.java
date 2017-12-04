@@ -24,7 +24,7 @@ public class Templo extends Construcao {
 }
         public Sacerdote criaSacedote (){
             //a unidade é colocada na mesma posicao da construcao;
-            
+            return null;
         }
         //aqui tbm nao compila pq precisamos implementar esse metodo.
 }

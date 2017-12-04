@@ -15,10 +15,7 @@ public class AtaqueDeAlcance extends Ataque {
         super (ataque);        
         this.alcance = alcance;
     }
-    @Override
-     public void ataca (Entidade entidadeAtacada){        
-         
-     }
+    
      @Override
      public boolean podeAtacar (Entidade atacante, Entidade atacado){         
          return Mapa.getDistanciaRaio (atacante, atacado)<= alcance;

@@ -24,12 +24,12 @@ public class Campones extends Unidade {
 }    
     public Construcao constroi (Posicao posicao, Construcao tipo){
         //cria uma construcao do tipo desejado.
-        //implementar o metodo, por isso nao ta compilando.
+        return null;
     }
     public void colhe (){
         //gera uma unidade de comida para a civilizacao.
-        this.getCivilizacao().getDinheiro().soma (new Dinheiro (1,0,0));
-    }
+        this.getCivilizacao().getDinheiro().soma (new Dinheiro (1,0,0));        
+    }    
     public void corta (){
         //gera uma unidade de madeira para a civilizacao.
         this.getCivilizacao().getDinheiro().soma(new Dinheiro (0, 0, 1));

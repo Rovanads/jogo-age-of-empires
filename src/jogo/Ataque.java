@@ -38,9 +38,7 @@ public class Ataque {
     
     public boolean podeAtacar (Entidade atacante, Entidade atacado){
         return Mapa.getDistanciaRaio (atacante, atacado)<= 2;
-                //Tá escrito assim no problema: "o objeto atacado só poderá 
-                //sofrer o ataque se estiver a 2 unidades de distância do objeto atacante 
-                //(dica: pense em sobrescrita de métodos);"
+                
     }
     
 }

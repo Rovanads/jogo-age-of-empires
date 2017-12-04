@@ -37,7 +37,7 @@ abstract public class Civilizacao {
         
     }
     public boolean podeConstruir (Construcao tipo){
-     //aqui tbm, nao ta compilando pq precisa ser implementado.   
+    return false;  
     }
     public void adicionaUnidade (Unidade unidade){
         this.getUnidades().add(unidade);

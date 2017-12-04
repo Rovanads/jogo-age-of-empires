@@ -22,9 +22,9 @@ public class Dinheiro {
     }
     public void soma (Dinheiro d){
         if (checaNegativo(d)){
-            this.madeira -= d.madeira;
-            this.ouro -= d.ouro;
-            this.comida -= d.comida;
+            this.madeira += d.madeira;
+            this.ouro += d.ouro;
+            this.comida += d.comida;
         
     }
     }
