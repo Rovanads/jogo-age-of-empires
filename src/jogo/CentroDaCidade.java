@@ -25,17 +25,18 @@ public CentroDaCidade (Posicao posicao, Civilizacao civilizacao ){
 }
 public Campones criaCampones (){
     if(this.getCivilizacao().podeConstruir(Campones.class)){
-        //Campones.class tambem nao ta aceitando.
+        
     
         this.getCivilizacao().adicionaUnidade(new Campones (this.getPosicao(), 
                 this.getCivilizacao()));
+        
         
             //implementar o metodo
             //cria a unidade campones
             
         }
 //cada centro da cidade permite 10 unidades de capacidade de populacao.
-
+return new Campones (this.getPosicao(), this.getCivilizacao());
 }
 }
 

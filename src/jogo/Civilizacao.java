@@ -36,7 +36,7 @@ abstract public class Civilizacao {
     public void inicializa (Posicao posicao){
         
     }
-    public boolean podeConstruir (Construcao tipo){
+    public boolean podeConstruir (Class Entidade){
     return false;  
     }
     public void adicionaUnidade (Unidade unidade){
