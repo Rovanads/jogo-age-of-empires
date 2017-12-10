@@ -11,5 +11,5 @@ package jogo;
  */
 public enum Direcao {
     //norte, nordeste, noroeste, sul, sudeste, sudoeste, leste, oeste
-        N, NE, NW, S, SE, SW,E, W
+        N, L, O, S
 }

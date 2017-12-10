@@ -12,7 +12,8 @@ package jogo;
 public class Guerreiro extends Unidade {
 public Guerreiro (Posicao posicao, Civilizacao civilizacao){
         super ("Guerreiro.jpg", new Dinheiro (0,50,0), true, 160, posicao, civilizacao, 
-                2, 1.8, new Ataque(13));       
+                2, 1.8, new Ataque(13));  
+        civilizacao.getUnidades().add(this);
     
 }
 

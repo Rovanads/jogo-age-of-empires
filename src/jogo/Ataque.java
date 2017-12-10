@@ -16,6 +16,7 @@ public class Ataque {
        this.ataque = ataque; 
        
        
+       
     }
     public void ataca (Entidade entidadeAtacada){  
         if (entidadeAtacada instanceof Unidade){

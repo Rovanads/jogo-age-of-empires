@@ -9,10 +9,8 @@ package jogo;
  *
  * @author Rovana
  */
-public class Egito extends Civilizacao {
-    boolean extinta;
-    int numeroUnidades = 0;
-    int numeroConstrucoes = 0;
+public class Egito extends Civilizacao {   
+   
     //cada civilizacao devera comecar com alguns camponeses e um 
     //centro de cidade
     //quando a civilizacao nao tiver nenhuma unidade ou construcao, uma mensagem 
@@ -20,11 +18,9 @@ public class Egito extends Civilizacao {
     //ser marcado como verdadeiro. A partir disso, criar qualquer tipo de 
     //unidade seve ser impossivel.
 //ver arraylist
-public Egito (Dinheiro dinheiro, int populacaoatual, 
-            int capacidadePopulacao){    
-super (new Dinheiro (500, 500, 500), populacaoatual, capacidadePopulacao);
-     Unidade unids [];
-     Construcao constrs [];
+public Egito (Dinheiro dinheiro, int populacaoatual){    
+super (new Dinheiro (500, 500, 500), populacaoatual);
+     
 }
 
 

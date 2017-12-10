@@ -15,10 +15,13 @@ public class Casa extends Construcao {
     //custo = 30 madeiras;
     //alcance = nao tem;
     
+    
         
         public Casa (Posicao posicao, Civilizacao civilizacao){
         super ("Casa.jpg", new Dinheiro (0,0,30), true, 75, posicao, 
                 civilizacao, new Ataque(0));
+        civilizacao.getConstrucoes().add(this);
+        
         
         //cada casa permite 2 unidades de capacidade da populacao.
     } 

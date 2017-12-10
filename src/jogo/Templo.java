@@ -18,7 +18,7 @@ public class Templo extends Construcao {
         public Templo (Posicao posicao, Civilizacao civilizacao){
         super ("Templo.jpg", new Dinheiro (0,0,250), true, 350, posicao, 
                 civilizacao, new Ataque(0)); 
-       
+       civilizacao.getConstrucoes().add(this);
         
     
 }

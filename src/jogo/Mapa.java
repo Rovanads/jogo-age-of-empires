@@ -16,7 +16,7 @@ public class Mapa {
     private static final Mapa mapa = new Mapa();
 
     //Construtor privado para impedir que outro Mapa seja criado (singleton)
-    private Mapa() {
+    Mapa() {
 
     }
 
@@ -29,19 +29,20 @@ public class Mapa {
         Posicao posicaoAtual = unidade.getPosicao();
         Posicao posicaoNova = new Posicao(posicaoAtual.x, posicaoAtual.y);
         
-        if (Arrays.asList(Direcao.N, Direcao.NE, Direcao.NW).contains(direcao)) {           
+        if (Arrays.asList(Direcao.N).contains(direcao)) {           
             posicaoNova.y+=velocidade;
         }
-        if (Arrays.asList(Direcao.S, Direcao.SE, Direcao.SW).contains(direcao)) {
+        if (Arrays.asList(Direcao.S).contains(direcao)) {
             posicaoNova.y+=velocidade;
         }
-        if (Arrays.asList(Direcao.E, Direcao.NE, Direcao.SE).contains(direcao)) {
+        if (Arrays.asList(Direcao.L).contains(direcao)) {
             posicaoNova.x+=velocidade;
         }
-        if (Arrays.asList(Direcao.W, Direcao.NW, Direcao.SW).contains(direcao)) {
+        if (Arrays.asList(Direcao.O).contains(direcao)) {
            posicaoNova.y+=velocidade;
         }
         unidade.setPosicao(posicaoNova);
+        System.out.println("posicao nova: "+ posicaoNova );
 
         return false;
 

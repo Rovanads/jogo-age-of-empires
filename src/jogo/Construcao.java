@@ -11,10 +11,12 @@ package jogo;
  */
 abstract class Construcao extends Entidade {
     //nao podem ter suas posicoes alteradas;
+    
     public Construcao (String imagem, Dinheiro custo, boolean isVivo, 
             int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
             Ataque ataque){
         super (imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
+        
     }
     
     

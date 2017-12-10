@@ -16,27 +16,41 @@ abstract public class Civilizacao {
     private Dinheiro dinheiro;//gastos a medida que a civilizacao cria objetos e 
     //recuperados atraves dos metodos dos objetos camponeses.
     private ArrayList<Construcao> construcoes = new ArrayList <>(); //vivas
-    private ArrayList<Unidade> unidades = new ArrayList <>();    
+    private ArrayList<Unidade> unidades = new ArrayList <>();  
+    
     
     //os atributos citados acima sÃ£o gastos a medida que a civilizacao cria 
     //objetos, e recuperados atraves dos metodos dos objetos camponeses.
       
     public int populacao;//nao pode ser maior que a capacidade da populacao
     //(dada pelas casas e centros da cidade)
-    public int capacidade;
+    public int capacidade =0;
     public String [] unidadesPermitidas;
+    CentroDaCidade cd;
+    Posicao pos;
+    Egito egito;
+    Grecia grecia;
+           
+    boolean extinta = false;
     
-    public Civilizacao (Dinheiro dinheiro, int populacao, int capacidade){
+    public Civilizacao (Dinheiro dinheiro, int populacao){
         this.dinheiro = dinheiro;        
         this.populacao = populacao;
-        this.capacidade = capacidade;
+       
+        
+        
         
     }
     //1 centro da cidade;
     public void inicializa (Posicao posicao){
+        cd.getPosicao();
         
     }
-    public boolean podeConstruir (Class Entidade){
+    public boolean podeConstruir (Class Unidade){
+        if (this.construcoes == null || this.unidades == null){            
+        extinta = true;
+            System.out.println("Civilização extinta");
+        }
     return false;  
     }
     public void adicionaUnidade (Unidade unidade){
@@ -46,16 +60,31 @@ abstract public class Civilizacao {
         
     }
     public void removeUnidade (Unidade unidade){
+        if (unidade.pontosvitais == 0){
         this.getUnidades().remove(unidade);
         this.populacao = this.getUnidades().size();
     }
-    public void adicionaConstrucao (Construcao construcao){
+    }
+    public void adicionaConstrucao (Construcao construcao){        
+        if (construcao instanceof Casa && extinta == false){
+            capacidade = capacidade + 2;
+        }
+        if (construcao instanceof CentroDaCidade && extinta == false){
+            capacidade = capacidade + 10;
+        }
         this.getConstrucoes().add(construcao);
-        //criar o algoritmo de aumento da capacidade da populacao;
     }
     public void removeConstrucao (Construcao construcao){
+        if (construcao.pontosvitais == 0){
+       if (construcao instanceof Casa){
+            capacidade = capacidade - 2;
+        }
+        if (construcao instanceof CentroDaCidade){
+            capacidade = capacidade - 10;
+        }
+        }
          this.getConstrucoes().remove(construcao);
-        //criar o algoritmo de diminuicao da capacidade da populacao;
+        
     }
     public Dinheiro getDinheiro (){
         return this.dinheiro;

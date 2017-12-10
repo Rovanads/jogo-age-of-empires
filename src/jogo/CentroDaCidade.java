@@ -19,7 +19,8 @@ public class CentroDaCidade extends Construcao {
 
 public CentroDaCidade (Posicao posicao, Civilizacao civilizacao ){
         super ("CentrodaCidade.jpg", new Dinheiro (0,0,200), true, 600, posicao, 
-                civilizacao, new AtaqueDeAlcance(10, 8));    
+                civilizacao, new AtaqueDeAlcance(10, 8));  
+        civilizacao.getConstrucoes().add(this);
                
     
 }
@@ -30,9 +31,7 @@ public Campones criaCampones (){
         this.getCivilizacao().adicionaUnidade(new Campones (this.getPosicao(), 
                 this.getCivilizacao()));
         
-        
-            //implementar o metodo
-            //cria a unidade campones
+            
             
         }
 //cada centro da cidade permite 10 unidades de capacidade de populacao.

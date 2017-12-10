@@ -20,7 +20,7 @@ public class Elefante extends Unidade {
 public Elefante (Posicao posicao, Civilizacao civilizacao){
         super ("Elefante.jpg", new Dinheiro (170,40,0), true, 600, posicao, 
                 civilizacao,2, 1.0, new Ataque(18));
-        
+         civilizacao.getUnidades().add(this);
     
 }
 

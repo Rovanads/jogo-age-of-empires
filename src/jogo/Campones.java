@@ -5,11 +5,15 @@
  */
 package jogo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Rovana
  */
 public class Campones extends Unidade {
+    ArrayList <Campones> adicionaCampones = new ArrayList<>();
+    Egito egito;
     //pontosdevida = 50;
     //ataque = 3;
     //custo = 50 comidas;
@@ -21,10 +25,33 @@ public class Campones extends Unidade {
     public Campones (Posicao posicao, Civilizacao civilizacao){
         super ("Campones.jpg", new Dinheiro (50,0,0), true, 50, posicao, civilizacao, 
                 0, 2.0, new Ataque(3));
+        civilizacao.getUnidades().add(this);
+        adicionaCampones.add(this);        
+        
+        
 }    
     public Construcao constroi (Posicao posicao, Construcao tipo){
-        //cria uma construcao do tipo desejado.
-        return null;
+        if (tipo instanceof Casa){           
+            System.out.println("Casa construída, posicão: " + posicao.x + "," +
+                    posicao.y);
+        }
+        if (tipo instanceof CentroDaCidade){
+            System.out.println("Centro da cidade construído na posicão: " + 
+                    posicao.x + "," + posicao.y);            
+        }
+        if (tipo instanceof Quartel){
+            System.out.println("Quartel construído na posicão: " + 
+                    posicao.x + "," + posicao.y);            
+        }
+        if (tipo instanceof Templo){
+            System.out.println("Templo construído na posicão: " + 
+                    posicao.x + "," + posicao.y);            
+        }
+        if (tipo instanceof Torre) {
+            System.out.println("Torre construída na posicão: "
+                    + posicao.x + "," + posicao.y);
+        }       
+        return tipo;
     }
     public void colhe (){
         //gera uma unidade de comida para a civilizacao.

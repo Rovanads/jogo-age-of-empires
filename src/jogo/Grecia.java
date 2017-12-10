@@ -9,10 +9,7 @@ package jogo;
  *
  * @author Rovana
  */
-public class Grecia extends Civilizacao {
-    boolean extinta;
-    int numeroUnidades = 0;
-    int numeroConstrucoes = 0;
+public class Grecia extends Civilizacao {    
     //cada civilizaÃ§Ã£o deverÃ¡ comeÃ§ar com alguns camponeses e um 
     //centro de cidade
     //quando a civilizaÃ§Ã£o nÃ£o tiver nenhuma unidade ou construcao, uma mensagem 
@@ -20,11 +17,10 @@ public class Grecia extends Civilizacao {
     //ser marcado como verdadeiro. A partir disso, criar qualquer tipo de 
     //unidade seve ser impossÃ­vel.
 
-public Grecia (Dinheiro dinheiro, int populacao, int capacidade){
+public Grecia (Dinheiro dinheiro, int populacao){
 
-super (new Dinheiro (500, 500, 500), populacao, capacidade);
-    Unidade unids [];
-    Construcao constrs [];
+super (new Dinheiro (500, 500, 500), populacao);
+    
 }
 
 

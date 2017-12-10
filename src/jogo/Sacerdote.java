@@ -20,7 +20,7 @@ public class Sacerdote extends Unidade {
     public Sacerdote (Posicao posicao, Civilizacao civilizacao){
         super ("Sacerdote.jpg", new Dinheiro (0,125,0), true, 25, posicao, 
                 civilizacao, 0, 1.0, new AtaqueDeAlcance(0, 10));        
-    
+    civilizacao.getUnidades().add(this);
 }
     
 public void converteInimigo (Entidade entidade){
@@ -28,10 +28,11 @@ public void converteInimigo (Entidade entidade){
     this.getCivilizacao().adicionaUnidade(this);
     entidade.getCivilizacao().removeUnidade(this);
     entidade.setCivilizacao(this.getCivilizacao());
+    System.out.println("O inimigo foi convertido para " + getCivilizacao());
+           
     }
             
-    //implementar esse metodo
-    //converte unidades e construcoes inimigas em sua civilizacao;
+    
 }
     
 
