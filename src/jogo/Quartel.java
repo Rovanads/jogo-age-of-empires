@@ -10,36 +10,91 @@ package jogo;
  * @author Rovana
  */
 public class Quartel extends Construcao {
-        //aguardando resposta do Valdir em relacaoo a classe posicao;
-    //pontos vitais = 350;
-    //ataque = nao tem;
-    //custo = 125 madeiras;
-    //alcance = nao tem;
-   
-        public Quartel (Posicao posicao, Civilizacao civilizacao){
-        super ("Quartel.jpg", new Dinheiro (0,0,125), true, 350, posicao, 
-                civilizacao, new Ataque(0)); 
-        civilizacao.getConstrucoes().add(this);
-    
+
+    /**
+     * Construtor da classe Quartel:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Quartel(Posicao posicao, Civilizacao civilizacao) {
+        super("Quartel.jpg", new Dinheiro(0, 0, 125), true, 350, posicao,
+                civilizacao, new Ataque(0));
+        
+
+    }
+
+    /**
+     * Metodo criaGuerreiro:
+     *
+     * @return guerreiro.
+     */
+    public Guerreiro criaGuerreiro() {
+        if (this.getCivilizacao().podeConstruir(Guerreiro.class)) {
+
+            this.getCivilizacao().adicionaUnidade(new Guerreiro
+        (this.getPosicao(), this.getCivilizacao()));
+        }
+
+        return new Guerreiro(this.getPosicao(), this.getCivilizacao());
+
+    }
+
+    /**
+     * Metodo criaCavaleiro:
+     *
+     * @return cavaleiro.
+     */
+    public Cavaleiro criaCavaleiro() {
+        if (this.getCivilizacao().podeConstruir(Cavaleiro.class)) {
+            this.getCivilizacao().adicionaUnidade(new Cavaleiro
+        (this.getPosicao(), this.getCivilizacao()));
+        }
+        return new Cavaleiro(this.getPosicao(), this.getCivilizacao());
+
+    }
+
+    /**
+     * Metodo criaArqueiro:
+     *
+     * @return Arqueiro.
+     */
+    public Arqueiro criaArqueiro() {
+        if (this.getCivilizacao().podeConstruir(Arqueiro.class)) {
+
+            this.getCivilizacao().adicionaUnidade(new Arqueiro(this.getPosicao()
+                    ,this.getCivilizacao()));
+        }
+        return new Arqueiro(this.getPosicao(), this.getCivilizacao());
+    }
+
+    /**
+     * Metodo criaElefante:
+     *
+     * @return elefante.
+     */
+    public Elefante criaElefante() {
+        if (this.getCivilizacao().podeConstruir(Elefante.class)) {
+
+            this.getCivilizacao().adicionaUnidade(new Elefante(this.getPosicao()
+                    ,this.getCivilizacao()));
+        }
+        return new Elefante(this.getPosicao(), this.getCivilizacao());
+    }
+
+    /**
+     * Metodo criaFalange:
+     *
+     * @return Falange.
+     */
+    public Falange criaFalange() {
+        if (this.getCivilizacao().podeConstruir(Falange.class)) {
+
+            this.getCivilizacao().adicionaUnidade(new Falange(this.getPosicao(),
+                    this.getCivilizacao()));
+        }
+        return new Falange(this.getPosicao(), this.getCivilizacao());
+    }
 }
-        public Guerreiro criaGuerreiro (){
-            //implementar o metodo
-            //cria as unidades: guerreiro, cavalheiro, arqueiro, elefante e 
-            //falange
-            return null;
-            
-        } 
-        public Cavaleiro criaCavaleiro (){
-            return null;
-        }
-        public Arqueiro criaArqueiro (){
-            return null;
-        }
-        public Elefante criaElefante (){
-            return null;
-        }
-        public Falange criaFalange (){
-            return null;
-        }
-        //aqui os metodos nao estao compilando pq precisam ser implementados.
-}
+       
+

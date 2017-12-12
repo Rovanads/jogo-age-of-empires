@@ -10,43 +10,87 @@ package jogo;
  * @author Rovana
  */
 abstract public class Entidade {
+
     public String imagem;
     private Dinheiro custo;
     public boolean isVivo;
-    public int pontosvitais; // carga de vida
+    public int pontosvitais;
     private Posicao posicao;
     private Civilizacao civilizacao;
-    
-    
-    public Entidade (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao){
-        //quando meus atributos são privados, eu posso colocá-los no Construtor?
+
+    /**
+     * Construtor da classe Entidade:
+     *
+     * @param imagem , nome do objeto;
+     * @param custo , valor do objeto;
+     * @param isVivo , condicao do objeto;
+     * @param pontosvitais , quantidade de pontos vitais;
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Entidade(String imagem, Dinheiro custo, boolean isVivo,
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao) {        
         this.imagem = imagem;
         this.custo = custo;
         this.isVivo = isVivo;
         this.pontosvitais = pontosvitais;
-        this.posicao = posicao;        
+        this.posicao = posicao;
         this.civilizacao = civilizacao;
-       
+
     }
-    public Posicao getPosicao (){
+
+    /**
+     * Metodo getPosicao:
+     *
+     * @return posicao;
+     */
+    public Posicao getPosicao() {
         return this.posicao;
     }
-    public void setPosicao (Posicao p){
+
+    /**
+     * Metodo setPosicao:
+     *
+     * @param p , posicao.
+     */
+    public void setPosicao(Posicao p) {
         this.posicao = p;
     }
-    public Civilizacao getCivilizacao (){
+
+    /**
+     * Metodo getCivilizacao:
+     *
+     * @return civilizacao;
+     */
+    public Civilizacao getCivilizacao() {
         return this.civilizacao;
     }
-    public void setCivilizacao(Civilizacao c){
+
+    /**
+     * Metodo set Civilizacao:
+     *
+     * @param c , civilizacao;
+     */
+    public void setCivilizacao(Civilizacao c) {
         this.civilizacao = c;
     }
-    public Dinheiro getDinheiro (){
+
+    /**
+     * Metodo getDinheiro:
+     *
+     * @return dinheiro;
+     */
+    public Dinheiro getDinheiro() {
         return this.custo;
     }
-    public void setDinheiro (Dinheiro d){
+
+    /**
+     * Metodo setDinheiro:
+     *
+     * @param d , dinheiro.
+     */
+    public void setDinheiro(Dinheiro d) {
         this.custo = d;
     }
-}
-    
+} 
 

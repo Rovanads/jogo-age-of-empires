@@ -27,7 +27,8 @@ public class Jogo {
         Quartel quartel = new Quartel (pos, egito);
         Templo templo = new Templo (pos, egito);
         Torre torre = new Torre(pos, grecia);
-        
+    
+       
         Arqueiro arqueiro = new Arqueiro (pos, grecia);
         Arqueiro arqueiro2 = new Arqueiro (pos, egito);
         Cavaleiro cavaleiro = new Cavaleiro (pos, egito);
@@ -96,6 +97,8 @@ public class Jogo {
         ataque.ataca(elefante2);
         alcance.podeAtacar(falange, templo);
         ataque.ataca(elefante2);
+        
+        
         
         
         

@@ -15,39 +15,60 @@ public class Mapa {
 
     private static final Mapa mapa = new Mapa();
 
-    //Construtor privado para impedir que outro Mapa seja criado (singleton)
+    //Construtor privado para impedir que outro Mapa seja criado
     Mapa() {
 
     }
 
+    /**
+     * Metodo get:
+     *
+     * @return mapa;
+     */
     public static Mapa get() {
         return mapa;
     }
 
-    public boolean moveUnidade(Unidade unidade, Direcao direcao, double velocidade) {
-        
+    /**
+     * Metodo moveUnidade:
+     *
+     * @param unidade , unidade a ser movida;
+     * @param direcao , direcao;
+     * @param velocidade , velocidade do movimento.
+     * @return se a unidade pode ser movida.
+     */
+    public boolean moveUnidade(Unidade unidade, Direcao direcao, 
+            double velocidade) {
+
         Posicao posicaoAtual = unidade.getPosicao();
         Posicao posicaoNova = new Posicao(posicaoAtual.x, posicaoAtual.y);
-        
-        if (Arrays.asList(Direcao.N).contains(direcao)) {           
-            posicaoNova.y+=velocidade;
+
+        if (Arrays.asList(Direcao.N).contains(direcao)) {
+            posicaoNova.y += velocidade;
         }
         if (Arrays.asList(Direcao.S).contains(direcao)) {
-            posicaoNova.y+=velocidade;
+            posicaoNova.y += velocidade;
         }
         if (Arrays.asList(Direcao.L).contains(direcao)) {
-            posicaoNova.x+=velocidade;
+            posicaoNova.x += velocidade;
         }
         if (Arrays.asList(Direcao.O).contains(direcao)) {
-           posicaoNova.y+=velocidade;
+            posicaoNova.y += velocidade;
         }
         unidade.setPosicao(posicaoNova);
-        System.out.println("posicao nova: "+ posicaoNova );
+        System.out.println("posicao nova: " + posicaoNova);
 
-        return false;
+        return true;
 
     }
 
+    /**
+     * Metodo getDistanciaRaio:
+     *
+     * @param e1 , entidade 1;
+     * @param e2 , entidade 2;
+     * @return distancia entre as posicoes.
+     */
     public static double getDistanciaRaio(Entidade e1, Entidade e2) {
         Posicao p1 = e1.getPosicao();
         Posicao p2 = e2.getPosicao();

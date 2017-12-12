@@ -10,34 +10,59 @@ package jogo;
  * @author Rovana
  */
 public class Dinheiro {
-    //quanto custa para construir um objeto.
+
     int madeira = 500;
     int ouro = 500;
     int comida = 500;
-    
-    public Dinheiro (int comida, int ouro, int madeira){
+
+    /**
+     * Construtor Dinheiro:
+     *
+     * @param comida , quantidade de comida;
+     * @param ouro , quantidade de ouro;
+     * @param madeira , quantidade de madeira.
+     */
+    public Dinheiro(int comida, int ouro, int madeira) {
         this.comida = comida;
         this.ouro = ouro;
         this.madeira = madeira;
     }
-    public void soma (Dinheiro d){
-        if (checaNegativo(d)){
+
+    /**
+     * Metodo soma:
+     *
+     * @param d , dinheiro.
+     */
+    public void soma(Dinheiro d) {
+        if (checaNegativo(d)) {
             this.madeira += d.madeira;
             this.ouro += d.ouro;
             this.comida += d.comida;
-        
+
+        }
     }
-    }
-    public void subtrai (Dinheiro d){
-        if (checaNegativo(d)){
+
+    /**
+     * Metodo subtrai:
+     *
+     * @param d , dinheiro.
+     */
+    public void subtrai(Dinheiro d) {
+        if (checaNegativo(d)) {
             this.madeira -= d.madeira;
             this.ouro -= d.ouro;
             this.comida -= d.comida;
         }
-        }      
-    
-    public boolean checaNegativo (Dinheiro d){
-        return this.madeira - d.madeira < 0 || this.ouro - d.ouro < 0 || 
-                this.comida - d.comida < 0;
+    }
+
+    /**
+     * Metodo checaNegativo:
+     *
+     * @param d , dinheiro.
+     * @return , se o valor for negativo.
+     */
+    public boolean checaNegativo(Dinheiro d) {
+        return this.madeira - d.madeira < 0 || this.ouro - d.ouro < 0
+                || this.comida - d.comida < 0;
     }
 }

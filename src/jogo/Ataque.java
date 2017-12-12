@@ -10,36 +10,44 @@ package jogo;
  * @author Rovana
  */
 public class Ataque {
-    protected int ataque;  
-    protected Entidade entidade;   
-    public Ataque (int ataque){
-       this.ataque = ataque; 
-       
-       
-       
+
+    protected int ataque;
+    protected Entidade entidade;
+
+    /**
+     * Construtor da classe Ataque
+     *
+     * @param ataque , valor do ataque do objeto.
+     */
+    public Ataque(int ataque) {
+        this.ataque = ataque;
+
     }
-    public void ataca (Entidade entidadeAtacada){  
-        if (entidadeAtacada instanceof Unidade){
-        entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - (ataque - 
-                ((Unidade) entidadeAtacada).armadura);
+
+    /**
+     * Metodo ataca:
+     *
+     * @param entidadeAtacada , entidade a ser atacada.
+     */
+    public void ataca(Entidade entidadeAtacada) {
+        if (entidadeAtacada instanceof Unidade) {
+            entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - 
+                    (ataque - ((Unidade) entidadeAtacada).armadura);
+        } else {
+            entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - 
+                    ataque;
         }
-        else{
-            entidadeAtacada.pontosvitais = entidadeAtacada.pontosvitais - ataque;
-        }
-        
-        
-                //esse metodo retira dos pontos vitais do objeto atacado, o numero
-                //de pontos de ataque do objeto atacante, menos o numero de pontos
-                //da armadura do objeto atacado;
-                //se o atacante nao tiver o atributo alcance, so poderao atacar
-                //a  2 unidades de distancia.(dica sobreescrita)
-                //apenas objetos com ataque diferente de 0, deverao ter esse metodo;
-                //nao consigo tirar os pontos da armadura da Entidade atacada.
     }
-    
-    public boolean podeAtacar (Entidade atacante, Entidade atacado){
-        return Mapa.getDistanciaRaio (atacante, atacado)<= 2;
-                
+    /**
+     * Metodo podeAtacar:
+     *
+     * @param atacante , objeto atacante;
+     * @param atacado, objeto atacado;
+     * @return , se o objeto pode ser atacado.
+     */
+    public boolean podeAtacar(Entidade atacante, Entidade atacado) {
+        return Mapa.getDistanciaRaio(atacante, atacado) <= 2;
+
     }
-    
+
 }

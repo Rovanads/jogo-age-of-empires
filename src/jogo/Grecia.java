@@ -9,20 +9,18 @@ package jogo;
  *
  * @author Rovana
  */
-public class Grecia extends Civilizacao {    
-    //cada civilizaÃ§Ã£o deverÃ¡ comeÃ§ar com alguns camponeses e um 
-    //centro de cidade
-    //quando a civilizaÃ§Ã£o nÃ£o tiver nenhuma unidade ou construcao, uma mensagem 
-    //deverÃ¡ ser impressa na tela e o atributo "extinta" da civilizaÃ§Ã£o deverÃ¡
-    //ser marcado como verdadeiro. A partir disso, criar qualquer tipo de 
-    //unidade seve ser impossÃ­vel.
+public class Grecia extends Civilizacao {
 
-public Grecia (Dinheiro dinheiro, int populacao){
+    /**
+     * Construtor da classe Grecia:
+     *
+     * @param dinheiro , dinheiro inicial;
+     * @param populacao , populacao inicial.
+     */
+    public Grecia(Dinheiro dinheiro, int populacao) {
 
-super (new Dinheiro (500, 500, 500), populacao);
-    
-}
+        super(new Dinheiro(500, 500, 500), populacao);
 
+    }
 
-    
 }

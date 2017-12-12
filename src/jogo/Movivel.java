@@ -10,6 +10,12 @@ package jogo;
  * @author Rovana
  */
 public interface Movivel {
-    public void mover (Direcao direcao);
-    
+
+    /**
+     * Construtor da interface Movivel:
+     *
+     * @param direcao , direcao do objeto.
+     */
+    public void mover(Direcao direcao);
+
 }

@@ -10,21 +10,32 @@ package jogo;
  * @author Rovana
  */
 public class Templo extends Construcao {
-       //pontos vitais = 350;
-    //ataque = não tem;
-    //custo = 250 madeiras;
-    //alcance = não tem;
-   
-        public Templo (Posicao posicao, Civilizacao civilizacao){
-        super ("Templo.jpg", new Dinheiro (0,0,250), true, 350, posicao, 
-                civilizacao, new Ataque(0)); 
-       civilizacao.getConstrucoes().add(this);
+
+    /**
+     * Costrutor Templo:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Templo(Posicao posicao, Civilizacao civilizacao) {
+        super("Templo.jpg", new Dinheiro(0, 0, 250), true, 350, posicao,
+                civilizacao, new Ataque(0));
         
-    
-}
-        public Sacerdote criaSacedote (){
-            //a unidade é colocada na mesma posicao da construcao;
-            return null;
+
+    }
+
+    /**
+     * Metodo criaSacerdote:
+     *
+     * @return sacerdote.
+     */
+    public Sacerdote criaSacedote() {
+        if (this.getCivilizacao().podeConstruir(Sacerdote.class)) {
+            this.getCivilizacao().adicionaUnidade(new Sacerdote
+        (this.getPosicao(), this.getCivilizacao()));
         }
-        //aqui tbm nao compila pq precisamos implementar esse metodo.
+        return new Sacerdote(this.getPosicao(), this.getCivilizacao());
+    }
+
 }
+        

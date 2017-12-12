@@ -10,15 +10,30 @@ package jogo;
  * @author Rovana
  */
 public class AtaqueDeAlcance extends Ataque {
+
     int alcance;
-    public AtaqueDeAlcance (int ataque, int alcance){
-        super (ataque);        
+
+    /**
+     * Construtor da classe AtaqueDeAlcance:
+     *
+     * @param ataque , valor do ataque;
+     * @param alcance , valor do alcance.
+     */
+    public AtaqueDeAlcance(int ataque, int alcance) {
+        super(ataque);
         this.alcance = alcance;
     }
-    
-     @Override
-     public boolean podeAtacar (Entidade atacante, Entidade atacado){         
-         return Mapa.getDistanciaRaio (atacante, atacado)<= alcance;
-     }
-    
+
+    /**
+     * Metodo podeAtacar
+     *
+     * @param atacante , objeto atacante;
+     * @param atacado , objeto atacado;
+     * @return , se pode ser atacado.
+     */
+    @Override
+    public boolean podeAtacar(Entidade atacante, Entidade atacado) {
+        return Mapa.getDistanciaRaio(atacante, atacado) <= alcance;
+    }
+
 }

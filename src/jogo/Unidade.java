@@ -10,40 +10,44 @@ package jogo;
  * @author Rovana
  */
 abstract public class Unidade extends Entidade implements Movivel {
-    
-    public double velocidade; // velocidade que a unidade se move   
+
+    public double velocidade;
     public Ataque ataque;
-    public int armadura;    
-    
-    public Unidade (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais,Posicao posicao, Civilizacao civilizacao, 
-            int armadura,double velocidade, Ataque ataque){
-        super (imagem, custo, isVivo, pontosvitais, posicao, civilizacao);        
+    public int armadura;
+
+    /**
+     * Construtor da classe Unidade:
+     *
+     * @param imagem , nome do objeto;
+     * @param custo , valor do objeto;
+     * @param isVivo , estado do objeto;
+     * @param pontosvitais , quantidade de pontos vitais;
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto;
+     * @param armadura , valor da armadura;
+     * @param velocidade , velocidade do objeto;
+     * @param ataque , valor do ataque.
+     */
+    public Unidade(String imagem, Dinheiro custo, boolean isVivo,
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao,
+            int armadura, double velocidade, Ataque ataque) {
+        super(imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
         this.velocidade = velocidade;
         this.ataque = ataque;
         this.armadura = armadura;
-        
+        civilizacao.adicionaUnidade(this);
     }
+
+    /**
+     * Metodo mover:
+     *
+     * @param direcao , direcao para onde o objeto deve se mover.
+     */
     @Override
-    public void mover(Direcao direcao){
+    public void mover(Direcao direcao) {
         Mapa.get().moveUnidade(this, direcao, velocidade);
-           
-        
-        
-        //falange.mover(Mapa.Direcao.N)
+
+    }
 }
-}
-        
-        
-        //aguardar a resposta do Valdir para essa implementação.
-        //modifica a posicao da unidade, adicionando a velocidade da unidade
-        //a sua posicao. Ex: se a posicao atual é (10,20), e a direcao é "Norte"
-        //e a velocidade da unidade é 2, sua posicao serÃ¡ alterada para (10,22), 
-        //indicando que a unidade anddou duas unidades para cima no mapa.
-        //x leste-oeste, y norte-sul.
-        
-    
-    
-    
 
 

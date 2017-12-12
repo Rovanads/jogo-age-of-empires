@@ -10,13 +10,18 @@ package jogo;
  * @author Rovana
  */
 public class Guerreiro extends Unidade {
-public Guerreiro (Posicao posicao, Civilizacao civilizacao){
-        super ("Guerreiro.jpg", new Dinheiro (0,50,0), true, 160, posicao, civilizacao, 
-                2, 1.8, new Ataque(13));  
-        civilizacao.getUnidades().add(this);
-    
-}
 
-     
-    
+    /**
+     * Construtor da classe Guerreiro:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Guerreiro(Posicao posicao, Civilizacao civilizacao) {
+        super("Guerreiro.jpg", new Dinheiro(0, 50, 0), true, 160, posicao,
+                civilizacao, 2, 1.8, new Ataque(13));
+        
+
+    }
+
 }

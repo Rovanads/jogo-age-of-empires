@@ -10,29 +10,33 @@ package jogo;
  * @author Rovana
  */
 public class Sacerdote extends Unidade {
-    //tem pontos de ataque e de alcance.
-    //pontosdevida = 25;
-    //ataque = 0;
-    //custo = 125 ouros;
-    //alcance = 10;
-    //armadura = 0;
-    //velocidade = 1.0;
-    public Sacerdote (Posicao posicao, Civilizacao civilizacao){
-        super ("Sacerdote.jpg", new Dinheiro (0,125,0), true, 25, posicao, 
-                civilizacao, 0, 1.0, new AtaqueDeAlcance(0, 10));        
-    civilizacao.getUnidades().add(this);
-}
-    
-public void converteInimigo (Entidade entidade){
-    
-    this.getCivilizacao().adicionaUnidade(this);
-    entidade.getCivilizacao().removeUnidade(this);
-    entidade.setCivilizacao(this.getCivilizacao());
-    System.out.println("O inimigo foi convertido para " + getCivilizacao());
-           
+
+    /**
+     * Construtor da classe Sacerdote:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Sacerdote(Posicao posicao, Civilizacao civilizacao) {
+        super("Sacerdote.jpg", new Dinheiro(0, 125, 0), true, 25, posicao,
+                civilizacao, 0, 1.0, new AtaqueDeAlcance(0, 10));
+       
     }
-            
-    
+
+    /**
+     * Metodo converteInimigo:
+     *
+     * @param entidade , entidade a ser convertida.
+     */
+    public void converteInimigo(Entidade entidade) {
+
+        this.getCivilizacao().adicionaUnidade(this);
+        entidade.getCivilizacao().removeUnidade(this);
+        entidade.setCivilizacao(this.getCivilizacao());
+        System.out.println("O inimigo foi convertido para " + getCivilizacao());
+
+    }
+
 }
     
 

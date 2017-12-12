@@ -10,18 +10,18 @@ package jogo;
  * @author Rovana
  */
 public class Torre extends Construcao {
-    //pontos vitais = 200;
-    //ataque = 20;
-    //custo = 70 madeiras;
-    //alcance = 7;
 
+    /**
+     * Construtor da classe Torre:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public Torre(Posicao posicao, Civilizacao civilizacao) {
+        super("Torre.jpg", new Dinheiro(0, 0, 70), true, 200, posicao,
+                civilizacao, new AtaqueDeAlcance(20, 7));
+        
 
-public Torre (Posicao posicao, Civilizacao civilizacao){
-        super ("Torre.jpg", new Dinheiro (0,0,70), true, 200, posicao, 
-                civilizacao, new AtaqueDeAlcance(20, 7));    
-       civilizacao.getConstrucoes().add(this);
-       
-    
-} 
-    
+    }
+
 }

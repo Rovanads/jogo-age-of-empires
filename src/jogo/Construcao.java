@@ -10,14 +10,23 @@ package jogo;
  * @author Rovana
  */
 abstract class Construcao extends Entidade {
-    //nao podem ter suas posicoes alteradas;
-    
-    public Construcao (String imagem, Dinheiro custo, boolean isVivo, 
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao, 
-            Ataque ataque){
-        super (imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
-        
+
+    /**
+     * Construtor da classe Construcao:
+     *
+     * @param imagem , nome do objeto;
+     * @param custo , valor do objeto;
+     * @param isVivo , se esta vivo;
+     * @param pontosvitais , quantidade de pontos vitais;
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao;
+     * @param ataque , valor do ataque;
+     */
+    public Construcao(String imagem, Dinheiro custo, boolean isVivo,
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao,
+            Ataque ataque) {
+        super(imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
+        civilizacao.adicionaConstrucao(this);
     }
-    
-    
+
 }

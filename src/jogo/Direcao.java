@@ -10,6 +10,5 @@ package jogo;
  * @author Rovana
  */
 public enum Direcao {
-    //norte, nordeste, noroeste, sul, sudeste, sudoeste, leste, oeste
-        N, L, O, S
+    N, L, O, S
 }

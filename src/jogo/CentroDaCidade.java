@@ -9,33 +9,35 @@ package jogo;
  *
  * @author Rovana
  */
-public class CentroDaCidade extends Construcao { 
-    //pontos vitais = 600;
-    //ataque = 10;
-    //custo = 200 madeiras;
-    //alcance = 8;
+public class CentroDaCidade extends Construcao {
 
+    /**
+     * Construtor da classe CentroDaCidade:
+     *
+     * @param posicao , posicao do objeto;
+     * @param civilizacao , civilizacao do objeto.
+     */
+    public CentroDaCidade(Posicao posicao, Civilizacao civilizacao) {
+        super("CentrodaCidade.jpg", new Dinheiro(0, 0, 200), true, 600, posicao,
+                civilizacao, new AtaqueDeAlcance(10, 8));
+       
 
+    }
 
-public CentroDaCidade (Posicao posicao, Civilizacao civilizacao ){
-        super ("CentrodaCidade.jpg", new Dinheiro (0,0,200), true, 600, posicao, 
-                civilizacao, new AtaqueDeAlcance(10, 8));  
-        civilizacao.getConstrucoes().add(this);
-               
-    
-}
-public Campones criaCampones (){
-    if(this.getCivilizacao().podeConstruir(Campones.class)){
-        
-    
-        this.getCivilizacao().adicionaUnidade(new Campones (this.getPosicao(), 
-                this.getCivilizacao()));
-        
-            
-            
+    /**
+     * Metodo criaCampones:
+     *
+     * @return campones.
+     */
+    public Campones criaCampones() {
+        if (this.getCivilizacao().podeConstruir(Campones.class)) {
+
+            this.getCivilizacao().adicionaUnidade(new Campones(this.getPosicao()
+                    ,this.getCivilizacao()));
+
         }
-//cada centro da cidade permite 10 unidades de capacidade de populacao.
-return new Campones (this.getPosicao(), this.getCivilizacao());
-}
+
+        return new Campones(this.getPosicao(), this.getCivilizacao());
+    }
 }
 
