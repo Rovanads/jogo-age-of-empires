@@ -24,16 +24,13 @@ public class AtaqueDeAlcance extends Ataque {
         this.alcance = alcance;
     }
 
-    /**
-     * Metodo podeAtacar
-     *
-     * @param atacante , objeto atacante;
-     * @param atacado , objeto atacado;
-     * @return , se pode ser atacado.
-     */
-    @Override
-    public boolean podeAtacar(Entidade atacante, Entidade atacado) {
-        return Mapa.getDistanciaRaio(atacante, atacado) <= alcance;
-    }
+	public int getAlcance() {
+		return alcance;
+	}
 
+	public void setAlcance(int alcance) {
+		this.alcance = alcance;
+	}
+
+    
 }

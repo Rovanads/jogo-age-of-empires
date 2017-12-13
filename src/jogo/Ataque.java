@@ -34,7 +34,7 @@ public class Ataque {
      */
     public boolean ataca(Entidade entidadeAtacada) {
     	if (!podeAtacar(entidade, entidadeAtacada)) {
-    		System.out.println("ERRO: Jogada invalida, muito distante");
+    		System.out.println("ERRO: Jogada invalida de " + entidade.getClass().getSimpleName() + ", muito distante");
     		return false;
     	}
     	if (!entidadeAtacada.isVivo()) {
@@ -76,7 +76,7 @@ public class Ataque {
         return Mapa.getDistanciaRaio(atacante, atacado) <= getAlcance();
     }
 
-	private int getAlcance() {
+	protected int getAlcance() {
 		return 2;
 	}
 
