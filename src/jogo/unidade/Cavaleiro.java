@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.unidade;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
@@ -18,9 +23,9 @@ public class Cavaleiro extends Unidade {
      * @param civilizacao , civilizacao do objeto.
      */
     public Cavaleiro(Posicao posicao, Civilizacao civilizacao) {
-        super("Cavaleiro.jpg", new Dinheiro(70, 80, 0), true, 180, posicao,
-                civilizacao, 3, 4.0, new Ataque(12));
-        
+        super("Cavaleiro.jpg", Util.CUSTOS.get(Cavaleiro.class), 180, posicao,
+                civilizacao, 3, 4.0);
+        this.ataque =  new Ataque(this, 12);
     }
 
 }

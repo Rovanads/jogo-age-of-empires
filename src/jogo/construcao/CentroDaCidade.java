@@ -3,7 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.AtaqueDeAlcance;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
+import jogo.unidade.Campones;
 
 /**
  *
@@ -18,9 +24,9 @@ public class CentroDaCidade extends Construcao {
      * @param civilizacao , civilizacao do objeto.
      */
     public CentroDaCidade(Posicao posicao, Civilizacao civilizacao) {
-        super("CentrodaCidade.jpg", new Dinheiro(0, 0, 200), true, 600, posicao,
-                civilizacao, new AtaqueDeAlcance(10, 8));
-       
+        super("CentrodaCidade.jpg", Util.CUSTOS.get(CentroDaCidade.class), 600, posicao,
+                civilizacao);
+       this.ataque = new AtaqueDeAlcance(this, 10, 8);
 
     }
 
@@ -31,13 +37,10 @@ public class CentroDaCidade extends Construcao {
      */
     public Campones criaCampones() {
         if (this.getCivilizacao().podeConstruir(Campones.class)) {
-
-            this.getCivilizacao().adicionaUnidade(new Campones(this.getPosicao()
-                    ,this.getCivilizacao()));
-
+            return new Campones(this.getPosicao(), this.getCivilizacao());
         }
 
-        return new Campones(this.getPosicao(), this.getCivilizacao());
+        return null;
     }
 }
 

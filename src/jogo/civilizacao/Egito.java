@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.civilizacao;
+
+import jogo.Posicao;
+import jogo.Util;
+import jogo.unidade.Elefante;
 
 /**
  *
@@ -17,8 +21,8 @@ public class Egito extends Civilizacao {
      * @param dinheiro , dinheiro inicial;
      * @param populacaoatual , populacao inicial da Civilizacao.
      */
-    public Egito(Dinheiro dinheiro, int populacaoatual) {
-        super(new Dinheiro(500, 500, 500), populacaoatual);
+    public Egito(Posicao posicao) {
+        super(posicao, Util.entidadesCivilizacao(Elefante.class));
 
     }
 

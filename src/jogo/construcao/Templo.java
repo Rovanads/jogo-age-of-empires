@@ -3,7 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
+import jogo.unidade.Sacerdote;
 
 /**
  *
@@ -18,10 +24,8 @@ public class Templo extends Construcao {
      * @param civilizacao , civilizacao do objeto.
      */
     public Templo(Posicao posicao, Civilizacao civilizacao) {
-        super("Templo.jpg", new Dinheiro(0, 0, 250), true, 350, posicao,
-                civilizacao, new Ataque(0));
-        
-
+        super("Templo.jpg", Util.CUSTOS.get(Templo.class), 350, posicao,
+                civilizacao);
     }
 
     /**
@@ -31,7 +35,7 @@ public class Templo extends Construcao {
      */
     public Sacerdote criaSacedote() {
         if (this.getCivilizacao().podeConstruir(Sacerdote.class)) {
-            this.getCivilizacao().adicionaUnidade(new Sacerdote
+            this.getCivilizacao().adicionaEntidade(new Sacerdote
         (this.getPosicao(), this.getCivilizacao()));
         }
         return new Sacerdote(this.getPosicao(), this.getCivilizacao());

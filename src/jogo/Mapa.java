@@ -7,6 +7,8 @@ package jogo;
 
 import java.util.Arrays;
 
+import jogo.unidade.Unidade;
+
 /**
  *
  * @author Rovana
@@ -47,17 +49,20 @@ public class Mapa {
             posicaoNova.y += velocidade;
         }
         if (Arrays.asList(Direcao.S).contains(direcao)) {
-            posicaoNova.y += velocidade;
+            posicaoNova.y -= velocidade;
         }
         if (Arrays.asList(Direcao.L).contains(direcao)) {
             posicaoNova.x += velocidade;
         }
         if (Arrays.asList(Direcao.O).contains(direcao)) {
-            posicaoNova.y += velocidade;
+            posicaoNova.x -= velocidade;
         }
         unidade.setPosicao(posicaoNova);
-        System.out.println("posicao nova: " + posicaoNova);
 
+        System.out.print("~ ");
+        System.out.print(unidade.getClass().getSimpleName());
+        System.out.print(" moveu para ");
+        System.out.println(unidade.getPosicao());
         return true;
 
     }

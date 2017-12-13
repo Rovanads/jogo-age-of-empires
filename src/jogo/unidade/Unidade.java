@@ -3,17 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.unidade;
+
+import jogo.Ataque;
+import jogo.Dinheiro;
+import jogo.Direcao;
+import jogo.Entidade;
+import jogo.Mapa;
+import jogo.Movivel;
+import jogo.Posicao;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
  * @author Rovana
  */
-abstract public class Unidade extends Entidade implements Movivel {
+public abstract class Unidade extends Entidade implements Movivel {
 
-    public double velocidade;
-    public Ataque ataque;
-    public int armadura;
+    private double velocidade;
+    private int armadura;
 
     /**
      * Construtor da classe Unidade:
@@ -28,14 +36,13 @@ abstract public class Unidade extends Entidade implements Movivel {
      * @param velocidade , velocidade do objeto;
      * @param ataque , valor do ataque.
      */
-    public Unidade(String imagem, Dinheiro custo, boolean isVivo,
+    public Unidade(String imagem, Dinheiro custo,
             int pontosvitais, Posicao posicao, Civilizacao civilizacao,
-            int armadura, double velocidade, Ataque ataque) {
-        super(imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
+            int armadura, double velocidade) {
+        super(imagem, custo, pontosvitais, posicao, civilizacao);
         this.velocidade = velocidade;
-        this.ataque = ataque;
         this.armadura = armadura;
-        civilizacao.adicionaUnidade(this);
+        civilizacao.adicionaEntidade(this);
     }
 
     /**
@@ -46,8 +53,33 @@ abstract public class Unidade extends Entidade implements Movivel {
     @Override
     public void mover(Direcao direcao) {
         Mapa.get().moveUnidade(this, direcao, velocidade);
-
     }
+
+	public double getVelocidade() {
+		return velocidade;
+	}
+
+	public void setVelocidade(double velocidade) {
+		this.velocidade = velocidade;
+	}
+
+	public Ataque getAtaque() {
+		return ataque;
+	}
+
+	public void setAtaque(Ataque ataque) {
+		this.ataque = ataque;
+	}
+
+	public int getArmadura() {
+		return armadura;
+	}
+
+	public void setArmadura(int armadura) {
+		this.armadura = armadura;
+	}
+    
+    
 }
 
 

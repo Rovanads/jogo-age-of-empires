@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.unidade;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
@@ -18,9 +23,9 @@ public class Falange extends Unidade {
      * @param civilizacao , civilizacao do objeto.
      */
     public Falange(Posicao posicao, Civilizacao civilizacao) {
-        super("Falange.jpg", new Dinheiro(60, 40, 0), true, 120, posicao, 
-                civilizacao, 7, 1.2, new Ataque(20));
-        
+        super("Falange.jpg", Util.CUSTOS.get(Falange.class), 120, posicao, 
+                civilizacao, 7, 1.2);
+        this.ataque =  new Ataque(this, 20);
 
     }
 

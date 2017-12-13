@@ -3,7 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
+import jogo.unidade.Arqueiro;
+import jogo.unidade.Cavaleiro;
+import jogo.unidade.Elefante;
+import jogo.unidade.Falange;
+import jogo.unidade.Guerreiro;
 
 /**
  *
@@ -18,9 +28,8 @@ public class Quartel extends Construcao {
      * @param civilizacao , civilizacao do objeto.
      */
     public Quartel(Posicao posicao, Civilizacao civilizacao) {
-        super("Quartel.jpg", new Dinheiro(0, 0, 125), true, 350, posicao,
-                civilizacao, new Ataque(0));
-        
+        super("Quartel.jpg", Util.CUSTOS.get(Quartel.class), 350, posicao,
+                civilizacao);
 
     }
 
@@ -32,7 +41,7 @@ public class Quartel extends Construcao {
     public Guerreiro criaGuerreiro() {
         if (this.getCivilizacao().podeConstruir(Guerreiro.class)) {
 
-            this.getCivilizacao().adicionaUnidade(new Guerreiro
+            this.getCivilizacao().adicionaEntidade(new Guerreiro
         (this.getPosicao(), this.getCivilizacao()));
         }
 
@@ -47,7 +56,7 @@ public class Quartel extends Construcao {
      */
     public Cavaleiro criaCavaleiro() {
         if (this.getCivilizacao().podeConstruir(Cavaleiro.class)) {
-            this.getCivilizacao().adicionaUnidade(new Cavaleiro
+            this.getCivilizacao().adicionaEntidade(new Cavaleiro
         (this.getPosicao(), this.getCivilizacao()));
         }
         return new Cavaleiro(this.getPosicao(), this.getCivilizacao());
@@ -62,7 +71,7 @@ public class Quartel extends Construcao {
     public Arqueiro criaArqueiro() {
         if (this.getCivilizacao().podeConstruir(Arqueiro.class)) {
 
-            this.getCivilizacao().adicionaUnidade(new Arqueiro(this.getPosicao()
+            this.getCivilizacao().adicionaEntidade(new Arqueiro(this.getPosicao()
                     ,this.getCivilizacao()));
         }
         return new Arqueiro(this.getPosicao(), this.getCivilizacao());
@@ -76,7 +85,7 @@ public class Quartel extends Construcao {
     public Elefante criaElefante() {
         if (this.getCivilizacao().podeConstruir(Elefante.class)) {
 
-            this.getCivilizacao().adicionaUnidade(new Elefante(this.getPosicao()
+            this.getCivilizacao().adicionaEntidade(new Elefante(this.getPosicao()
                     ,this.getCivilizacao()));
         }
         return new Elefante(this.getPosicao(), this.getCivilizacao());
@@ -90,7 +99,7 @@ public class Quartel extends Construcao {
     public Falange criaFalange() {
         if (this.getCivilizacao().podeConstruir(Falange.class)) {
 
-            this.getCivilizacao().adicionaUnidade(new Falange(this.getPosicao(),
+            this.getCivilizacao().adicionaEntidade(new Falange(this.getPosicao(),
                     this.getCivilizacao()));
         }
         return new Falange(this.getPosicao(), this.getCivilizacao());

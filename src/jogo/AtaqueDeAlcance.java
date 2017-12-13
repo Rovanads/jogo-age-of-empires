@@ -19,8 +19,8 @@ public class AtaqueDeAlcance extends Ataque {
      * @param ataque , valor do ataque;
      * @param alcance , valor do alcance.
      */
-    public AtaqueDeAlcance(int ataque, int alcance) {
-        super(ataque);
+    public AtaqueDeAlcance(Entidade entidade, int ataque, int alcance) {
+        super(entidade, ataque);
         this.alcance = alcance;
     }
 

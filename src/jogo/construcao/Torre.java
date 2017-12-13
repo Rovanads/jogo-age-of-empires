@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.AtaqueDeAlcance;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
@@ -18,9 +23,9 @@ public class Torre extends Construcao {
      * @param civilizacao , civilizacao do objeto.
      */
     public Torre(Posicao posicao, Civilizacao civilizacao) {
-        super("Torre.jpg", new Dinheiro(0, 0, 70), true, 200, posicao,
-                civilizacao, new AtaqueDeAlcance(20, 7));
-        
+        super("Torre.jpg", Util.CUSTOS.get(Torre.class), 200, posicao,
+                civilizacao);
+        this.ataque = new AtaqueDeAlcance(this, 20, 7); 
 
     }
 
