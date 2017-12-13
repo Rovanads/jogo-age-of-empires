@@ -5,21 +5,40 @@
  */
 package jogo;
 
+import jogo.civilizacao.Civilizacao;
+import jogo.civilizacao.Egito;
+import jogo.civilizacao.Grecia;
+import jogo.construcao.Casa;
+import jogo.construcao.CentroDaCidade;
+import jogo.construcao.Quartel;
+import jogo.construcao.Templo;
+import jogo.construcao.Torre;
+import jogo.unidade.Arqueiro;
+import jogo.unidade.Campones;
+import jogo.unidade.Cavaleiro;
+import jogo.unidade.Elefante;
+import jogo.unidade.Falange;
+import jogo.unidade.Guerreiro;
+import jogo.unidade.Sacerdote;
+import jogo.unidade.Unidade;
+
 /**
  *
  * @author Rovana
  */
 public class Jogo {
-    Civilizacao civA;
-    Civilizacao civB;
-    Mapa mapa;
+    private Civilizacao[] civs;
     
+    public Jogo(Civilizacao... civs) {
+    	this.civs = civs;
+    }
+    /*
     public static void main(String[] args) {
         Dinheiro dinheiro = new Dinheiro (500, 500, 500);
         Posicao pos = new Posicao (2, 2);
-        Egito egito = new Egito (dinheiro, 30);
+        Egito egito = new Egito (pos);
         CentroDaCidade cd = new CentroDaCidade (pos, egito);       
-        Grecia grecia = new Grecia (dinheiro, 30);
+        Grecia grecia = new Grecia (pos);
         CentroDaCidade cd2 = new CentroDaCidade (pos, grecia);
         Campones campones = new Campones (pos, egito);
         Campones campones2 = new Campones (pos, grecia);
@@ -62,17 +81,17 @@ public class Jogo {
         egito.adicionaUnidade(guerreiro2);
         egito.adicionaUnidade(sacerdote2);
         
-        grecia.adicionaConstrucao(casa);
-        grecia.adicionaConstrucao(cd);
-        grecia.adicionaConstrucao(quartel);
-        grecia.adicionaConstrucao(templo);
-        grecia.adicionaConstrucao(torre);
+        grecia.adicionaEntidade(casa);
+        grecia.adicionaEntidade(cd);
+        grecia.adicionaEntidade(quartel);
+        grecia.adicionaEntidade(templo);
+        grecia.adicionaEntidade(torre);
         
-        egito.adicionaConstrucao(casa);
-        egito.adicionaConstrucao(cd);
-        egito.adicionaConstrucao(quartel);
-        egito.adicionaConstrucao(templo);
-        egito.adicionaConstrucao(torre);
+        egito.adicionaEntidade(casa);
+        egito.adicionaEntidade(cd);
+        egito.adicionaEntidade(quartel);
+        egito.adicionaEntidade(templo);
+        egito.adicionaEntidade(torre);
         
         campones.constroi(pos, casa);        
         campones.constroi(pos, quartel);
@@ -112,6 +131,6 @@ public class Jogo {
         
         
    
-    }
+    }*/
     
 }

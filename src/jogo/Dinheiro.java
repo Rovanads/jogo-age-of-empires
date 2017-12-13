@@ -34,12 +34,9 @@ public class Dinheiro {
      * @param d , dinheiro.
      */
     public void soma(Dinheiro d) {
-        if (checaNegativo(d)) {
-            this.madeira += d.madeira;
-            this.ouro += d.ouro;
-            this.comida += d.comida;
-
-        }
+        this.madeira += d.madeira;
+        this.ouro += d.ouro;
+        this.comida += d.comida;
     }
 
     /**
@@ -48,7 +45,7 @@ public class Dinheiro {
      * @param d , dinheiro.
      */
     public void subtrai(Dinheiro d) {
-        if (checaNegativo(d)) {
+        if (!checaNegativo(d)) {
             this.madeira -= d.madeira;
             this.ouro -= d.ouro;
             this.comida -= d.comida;
@@ -65,4 +62,11 @@ public class Dinheiro {
         return this.madeira - d.madeira < 0 || this.ouro - d.ouro < 0
                 || this.comida - d.comida < 0;
     }
+
+	@Override
+	public String toString() {
+		return "$[madeira=" + madeira + ", ouro=" + ouro + ", comida=" + comida + "]";
+	}
+    
+    
 }

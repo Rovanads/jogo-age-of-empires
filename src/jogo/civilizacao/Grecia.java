@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.civilizacao;
+
+import jogo.Posicao;
+import jogo.Util;
+import jogo.unidade.Elefante;
+import jogo.unidade.Falange;
 
 /**
  *
@@ -17,9 +22,8 @@ public class Grecia extends Civilizacao {
      * @param dinheiro , dinheiro inicial;
      * @param populacao , populacao inicial.
      */
-    public Grecia(Dinheiro dinheiro, int populacao) {
-
-        super(new Dinheiro(500, 500, 500), populacao);
+    public Grecia(Posicao posicao) {
+        super(posicao, Util.entidadesCivilizacao(Falange.class));
 
     }
 

@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.unidade;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
@@ -18,9 +23,9 @@ public class Elefante extends Unidade {
      * @param civilizacao , civilizacao do objeto.
      */
     public Elefante(Posicao posicao, Civilizacao civilizacao) {
-        super("Elefante.jpg", new Dinheiro(170, 40, 0), true, 600, posicao,
-                civilizacao, 2, 1.0, new Ataque(18));
-        
+        super("Elefante.jpg", Util.CUSTOS.get(Elefante.class), 600, posicao,
+                civilizacao, 2, 1.0);
+        this.ataque =  new Ataque(this, 18);
 
     }
 

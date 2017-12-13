@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.Ataque;
+import jogo.Posicao;
+import jogo.Util;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
@@ -18,9 +23,8 @@ public class Casa extends Construcao {
      * @param civilizacao , civilizacao do objeto.
      */
     public Casa(Posicao posicao, Civilizacao civilizacao) {
-        super("Casa.jpg", new Dinheiro(0, 0, 30), true, 75, posicao,
-                civilizacao, new Ataque(0));
-        
+        super("Casa.jpg", Util.CUSTOS.get(Casa.class), 75, posicao,
+                civilizacao);
 
     }
 

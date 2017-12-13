@@ -3,13 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogo;
+package jogo.construcao;
+
+import jogo.Ataque;
+import jogo.Dinheiro;
+import jogo.Entidade;
+import jogo.Posicao;
+import jogo.civilizacao.Civilizacao;
 
 /**
  *
  * @author Rovana
  */
-abstract class Construcao extends Entidade {
+public abstract class Construcao extends Entidade {
 
     /**
      * Construtor da classe Construcao:
@@ -22,11 +28,10 @@ abstract class Construcao extends Entidade {
      * @param civilizacao , civilizacao;
      * @param ataque , valor do ataque;
      */
-    public Construcao(String imagem, Dinheiro custo, boolean isVivo,
-            int pontosvitais, Posicao posicao, Civilizacao civilizacao,
-            Ataque ataque) {
-        super(imagem, custo, isVivo, pontosvitais, posicao, civilizacao);
-        civilizacao.adicionaConstrucao(this);
+    public Construcao(String imagem, Dinheiro custo,
+            int pontosvitais, Posicao posicao, Civilizacao civilizacao) {
+        super(imagem, custo, pontosvitais, posicao, civilizacao);
+        civilizacao.adicionaEntidade(this);
     }
 
 }
