@@ -17,29 +17,28 @@ import jogo.unidade.Sacerdote;
  */
 public class Templo extends Construcao {
 
-    /**
-     * Costrutor Templo:
-     *
-     * @param posicao , posicao do objeto;
-     * @param civilizacao , civilizacao do objeto.
-     */
-    public Templo(Posicao posicao, Civilizacao civilizacao) {
-        super("Templo.jpg", Util.CUSTOS.get(Templo.class), 350, posicao,
-                civilizacao);
-    }
+	/**
+	 * Costrutor Templo:
+	 *
+	 * @param posicao
+	 *            , posicao do objeto;
+	 * @param civilizacao
+	 *            , civilizacao do objeto.
+	 */
+	public Templo(Posicao posicao, Civilizacao civilizacao) {
+		super("Templo.jpg", Util.CUSTOS.get(Templo.class), 350, posicao, civilizacao);
+	}
 
-    /**
-     * Metodo criaSacerdote:
-     *
-     * @return sacerdote.
-     */
-    public Sacerdote criaSacedote() {
-        if (this.getCivilizacao().podeConstruir(Sacerdote.class)) {
-            this.getCivilizacao().adicionaEntidade(new Sacerdote
-        (this.getPosicao(), this.getCivilizacao()));
-        }
-        return new Sacerdote(this.getPosicao(), this.getCivilizacao());
-    }
+	/**
+	 * Metodo criaSacerdote:
+	 *
+	 * @return sacerdote.
+	 */
+	public Sacerdote criaSacerdote() {
+		if (this.getCivilizacao().podeConstruir(Sacerdote.class)) {
+			return new Sacerdote(this.getPosicao(), this.getCivilizacao());
+		}
+		return null;
+	}
 
 }
-        

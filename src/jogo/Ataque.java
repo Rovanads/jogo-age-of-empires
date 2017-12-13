@@ -34,7 +34,7 @@ public class Ataque {
      */
     public boolean ataca(Entidade entidadeAtacada) {
     	if (!podeAtacar(entidade, entidadeAtacada)) {
-    		System.out.println("ERRO: Jogada invalida de " + entidade.getClass().getSimpleName() + ", muito distante");
+    		System.out.println("ERRO: Jogada invalida de " + entidade + ", muito distante");
     		return false;
     	}
     	if (!entidadeAtacada.isVivo()) {
@@ -52,15 +52,15 @@ public class Ataque {
         if (entidadeAtacada.getPontosvitais() <= 0) {
         	entidadeAtacada.getCivilizacao().removeEntidade(entidadeAtacada);
         	System.out.print("! ");
-        	System.out.print(entidade.getClass().getSimpleName());
+        	System.out.print(entidade);
         	System.out.print(" matou ");
-        	System.out.println(entidadeAtacada.getClass().getSimpleName());
+        	System.out.println(entidadeAtacada);
         	entidadeAtacada.getCivilizacao().existeCivilizacao();
         } else { 
         	System.out.print("! ");
-        	System.out.print(entidade.getClass().getSimpleName());
+        	System.out.print(entidade);
         	System.out.print(" atacou ");
-        	System.out.print(entidadeAtacada.getClass().getSimpleName());
+        	System.out.print(entidadeAtacada);
         	System.out.println(", pontos vitais restantes=" + entidadeAtacada.getPontosvitais());
         }
         return true;

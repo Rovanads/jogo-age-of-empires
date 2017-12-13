@@ -60,7 +60,7 @@ public class Mapa {
         unidade.setPosicao(posicaoNova);
 
         System.out.print("~ ");
-        System.out.print(unidade.getClass().getSimpleName());
+        System.out.print(unidade);
         System.out.print(" moveu para ");
         System.out.println(unidade.getPosicao());
         return true;

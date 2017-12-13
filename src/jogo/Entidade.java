@@ -45,7 +45,7 @@ abstract public class Entidade {
 		this.posicao = posicao;
 		this.civilizacao = civilizacao;
 
-		System.out.println("* " + civilizacao.getClass().getSimpleName() + " criou " + getClass().getSimpleName()
+		System.out.println("* " + civilizacao + " criou " + this
 				+ " em " + posicao);
 	}
 
@@ -96,5 +96,12 @@ abstract public class Entidade {
 	public void setCivilizacao(Civilizacao civilizacao) {
 		this.civilizacao = civilizacao;
 	}
+
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
+	}
+	
+	
 
 }

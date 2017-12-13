@@ -8,6 +8,7 @@ package jogo.civilizacao;
 import jogo.Posicao;
 import jogo.Util;
 import jogo.unidade.Elefante;
+import jogo.unidade.Falange;
 
 /**
  *
@@ -22,7 +23,7 @@ public class Grecia extends Civilizacao {
      * @param populacao , populacao inicial.
      */
     public Grecia(Posicao posicao) {
-        super(posicao, Util.entidadesCivilizacao(Elefante.class));
+        super(posicao, Util.entidadesCivilizacao(Falange.class));
 
     }
 

@@ -40,13 +40,13 @@ public abstract class Civilizacao {
     	this.entidadesPermitidas = entidadesPermitidas;
     	this.dinheiro = new Dinheiro(500, 500, 500);
     	this.centroDaCidade = new CentroDaCidade(posicao, this);
-    	System.out.println("** Civilizacao " + getClass().getSimpleName() + " inicializada!");
+    	System.out.println("** Civilizacao " + this + " inicializada!");
     }
 
     public void existeCivilizacao() {
         if (this.construcoes.isEmpty()) {
             extinta = true;
-            System.out.println("GAME OVER: " + getClass().getSimpleName() + " extinta!");
+            System.out.println("GAME OVER: " + this + " extinta!");
         }
     }
 
@@ -60,24 +60,24 @@ public abstract class Civilizacao {
         
     	// Checa se classe que estamos passando é válida: é subclasse de Entidade
     	if (entidade == null && !entidade.isAssignableFrom(Entidade.class)){
-    		System.err.println("ERRO: entidade invalida.");
+    		System.out.println("ERRO: entidade invalida.");
             return false;
         }
     	
     	//Checa se a unidade especial esta propria: para evitar que Egito crie Falange, por exemplo
     	if (!Arrays.asList(entidadesPermitidas).contains(entidade)){
-    		System.err.println("ERRO: unidade nao permitida.");
+    		System.out.println("ERRO: unidade nao permitida=" + entidade.getSimpleName());
             return false;
         }
         
         //Checa se a capacidade nao está excedente: populacao > capacidade
         if (populacao + 1 > capacidade){
-        	System.err.println("ERRO: capacidade esta fora do limite.");
+        	System.out.println("ERRO: capacidade esta fora do limite.");
             return false;
         }
         //Checa se temos dinheiro para construir a entidade
 		if (dinheiro.checaNegativo(Util.CUSTOS.get(entidade))){
-        	System.err.println("ERRO: falta dinheiro.");
+        	System.out.println("ERRO: falta dinheiro.");
             return false;
         }
         
@@ -153,7 +153,11 @@ public abstract class Civilizacao {
     	}
     }
     public void adicionaEntidade(Object entidade) {
-    	throw new UnsupportedOperationException();
+    	if (entidade instanceof Unidade) {
+    		adicionaEntidade((Unidade) entidade);
+    	} else	if (entidade instanceof Construcao) {
+    		adicionaEntidade((Construcao) entidade);
+    	}
     }
     
     public void imprimeSaldo() {
@@ -247,6 +251,10 @@ public abstract class Civilizacao {
 	}
 
 
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
+	}
 }
     
 

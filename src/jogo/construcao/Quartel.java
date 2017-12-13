@@ -21,89 +21,82 @@ import jogo.unidade.Guerreiro;
  */
 public class Quartel extends Construcao {
 
-    /**
-     * Construtor da classe Quartel:
-     *
-     * @param posicao , posicao do objeto;
-     * @param civilizacao , civilizacao do objeto.
-     */
-    public Quartel(Posicao posicao, Civilizacao civilizacao) {
-        super("Quartel.jpg", Util.CUSTOS.get(Quartel.class), 350, posicao,
-                civilizacao);
+	/**
+	 * Construtor da classe Quartel:
+	 *
+	 * @param posicao
+	 *            , posicao do objeto;
+	 * @param civilizacao
+	 *            , civilizacao do objeto.
+	 */
+	public Quartel(Posicao posicao, Civilizacao civilizacao) {
+		super("Quartel.jpg", Util.CUSTOS.get(Quartel.class), 350, posicao, civilizacao);
 
-    }
+	}
 
-    /**
-     * Metodo criaGuerreiro:
-     *
-     * @return guerreiro.
-     */
-    public Guerreiro criaGuerreiro() {
-        if (this.getCivilizacao().podeConstruir(Guerreiro.class)) {
+	/**
+	 * Metodo criaGuerreiro:
+	 *
+	 * @return guerreiro.
+	 */
+	public Guerreiro criaGuerreiro() {
+		if (this.getCivilizacao().podeConstruir(Guerreiro.class)) {
+			return new Guerreiro(this.getPosicao(), this.getCivilizacao());
+		}
 
-            this.getCivilizacao().adicionaEntidade(new Guerreiro
-        (this.getPosicao(), this.getCivilizacao()));
-        }
+		return null;
 
-        return new Guerreiro(this.getPosicao(), this.getCivilizacao());
+	}
 
-    }
+	/**
+	 * Metodo criaCavaleiro:
+	 *
+	 * @return cavaleiro.
+	 */
+	public Cavaleiro criaCavaleiro() {
+		if (this.getCivilizacao().podeConstruir(Cavaleiro.class)) {
+			return new Cavaleiro(this.getPosicao(), this.getCivilizacao());
+		}
+		return null;
 
-    /**
-     * Metodo criaCavaleiro:
-     *
-     * @return cavaleiro.
-     */
-    public Cavaleiro criaCavaleiro() {
-        if (this.getCivilizacao().podeConstruir(Cavaleiro.class)) {
-            this.getCivilizacao().adicionaEntidade(new Cavaleiro
-        (this.getPosicao(), this.getCivilizacao()));
-        }
-        return new Cavaleiro(this.getPosicao(), this.getCivilizacao());
+	}
 
-    }
+	/**
+	 * Metodo criaArqueiro:
+	 *
+	 * @return Arqueiro.
+	 */
+	public Arqueiro criaArqueiro() {
+		if (this.getCivilizacao().podeConstruir(Arqueiro.class)) {
 
-    /**
-     * Metodo criaArqueiro:
-     *
-     * @return Arqueiro.
-     */
-    public Arqueiro criaArqueiro() {
-        if (this.getCivilizacao().podeConstruir(Arqueiro.class)) {
+			return new Arqueiro(this.getPosicao(), this.getCivilizacao());
+		}
+		return null;
+	}
 
-            this.getCivilizacao().adicionaEntidade(new Arqueiro(this.getPosicao()
-                    ,this.getCivilizacao()));
-        }
-        return new Arqueiro(this.getPosicao(), this.getCivilizacao());
-    }
+	/**
+	 * Metodo criaElefante:
+	 *
+	 * @return elefante.
+	 */
+	public Elefante criaElefante() {
+		if (this.getCivilizacao().podeConstruir(Elefante.class)) {
 
-    /**
-     * Metodo criaElefante:
-     *
-     * @return elefante.
-     */
-    public Elefante criaElefante() {
-        if (this.getCivilizacao().podeConstruir(Elefante.class)) {
+			return new Elefante(this.getPosicao(), this.getCivilizacao());
+		}
+		return null;
+	}
 
-            this.getCivilizacao().adicionaEntidade(new Elefante(this.getPosicao()
-                    ,this.getCivilizacao()));
-        }
-        return new Elefante(this.getPosicao(), this.getCivilizacao());
-    }
+	/**
+	 * Metodo criaFalange:
+	 *
+	 * @return Falange.
+	 */
+	public Falange criaFalange() {
+		if (this.getCivilizacao().podeConstruir(Falange.class)) {
 
-    /**
-     * Metodo criaFalange:
-     *
-     * @return Falange.
-     */
-    public Falange criaFalange() {
-        if (this.getCivilizacao().podeConstruir(Falange.class)) {
-
-            this.getCivilizacao().adicionaEntidade(new Falange(this.getPosicao(),
-                    this.getCivilizacao()));
-        }
-        return new Falange(this.getPosicao(), this.getCivilizacao());
-    }
+			return new Falange(this.getPosicao(), this.getCivilizacao());
+		}
+		return null;
+	}
 }
-       
-

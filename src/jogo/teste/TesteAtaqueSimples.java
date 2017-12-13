@@ -21,12 +21,10 @@ public class TesteAtaqueSimples {
 
 		Posicao posEgito = new Posicao(1, 1);
 		Civilizacao egito = new Egito(posEgito);
-
 		System.out.println();
 
 		Posicao posGrecia = new Posicao(10, 10);
 		Civilizacao grecia = new Grecia(posGrecia);
-
 		System.out.println();
 
 		Campones camponesEgito = egito.getCentroDaCidade().criaCampones();
