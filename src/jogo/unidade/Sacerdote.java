@@ -36,12 +36,13 @@ public class Sacerdote extends Unidade {
      * @param entidade , entidade a ser convertida.
      */
     public void converteInimigo(Entidade entidade) {
-
-    	entidade.getCivilizacao().removeEntidade(entidade);
-        this.getCivilizacao().adicionaEntidade(entidade);
-        this.getCivilizacao().getDinheiro().soma(entidade.getCusto());
-        entidade.setCivilizacao(this.getCivilizacao());
-        System.out.println("O inimigo " + entidade + " foi convertido para " + getCivilizacao());
+    	if (this.ataque.podeAtacar(this, entidade)) {
+    		entidade.getCivilizacao().removeEntidade(entidade);
+    		this.getCivilizacao().adicionaEntidade(entidade);
+    		this.getCivilizacao().getDinheiro().soma(entidade.getCusto());
+    		entidade.setCivilizacao(this.getCivilizacao());
+    		System.out.println("O inimigo " + entidade + " foi convertido para " + getCivilizacao());
+    	}
 
     }
 

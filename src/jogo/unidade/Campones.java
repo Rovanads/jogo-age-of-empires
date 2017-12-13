@@ -10,6 +10,7 @@ import jogo.Dinheiro;
 import jogo.Posicao;
 import jogo.Util;
 import jogo.civilizacao.Civilizacao;
+import jogo.construcao.Construcao;
 
 /**
  *
@@ -37,7 +38,7 @@ public class Campones extends Unidade {
      * @param tipo , tipo de Construcao;
      * @return o objeto criado.
      */
-    public <C> C constroi(Class<? extends C> tipo) {
+    public <C extends Construcao> C constroi(Class<? extends C> tipo) {
         if (getCivilizacao().podeConstruir(tipo)) {
             try {
 				return (C) tipo.getConstructors()[0].newInstance(getPosicao(), getCivilizacao());
